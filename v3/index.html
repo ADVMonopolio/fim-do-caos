@@ -10,11 +10,16 @@
     })(window,document,'script','dataLayer','GTM-WT73H84R');</script>
     <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FIM DO CAOS™ 2ª EDIÇÃO — Advocacia de Monopólio</title>
-    <meta name="description" content="Imersão presencial na advocacia. 06 e 07 de novembro, Casa do Storytelling, Alphaville. Dois dias de porta fechada para advogados que decidiram parar de sobreviver.">
-    <meta property="og:title" content="Seja a escolha óbvia de alguém · Fim do Caos™ 2ª edição · 06 e 07 de novembro">
-    <meta property="og:description" content="06 e 07 de novembro, Alphaville. Dois dias de porta fechada para advogados que querem território, não mais uma técnica.">
+    <title>FIM DO CAOS™ 2ª EDIÇÃO · Advocacia de Monopólio</title>
+    <meta name="description" content="Imersão presencial para advogados que já têm clientes. 06 e 07 de novembro, das 08h30 às 18h00, em Alphaville (SP). Lote 0 a R$ 147.">
+    <meta property="og:title" content="Pare de depender de indicação para fechar contratos · Fim do Caos™ 2ª edição">
+    <meta property="og:description" content="2 dias com os 5 sócios da ADVM: 06 e 07/11, Alphaville (SP). Lote 0: R$ 147.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.fimdocaos.com.br/">
+    <meta property="og:image" content="https://www.fimdocaos.com.br/assets/mostrar_evento_cheio.jpg">
+    <meta property="og:image:width" content="1600">
+    <meta property="og:image:height" content="1067">
+    <link rel="icon" type="image/png" href="/assets/ADVM_MARCA-18.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -68,7 +73,7 @@
             overflow-x: hidden;
         }
 
-        img { max-width: 100%; display: block; }
+        img { max-width: 100%; height: auto; display: block; }
 
         .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 1.5rem; }
 
@@ -220,7 +225,7 @@
         }
         .hero-fundo {
             position: absolute; inset: 0;
-            background: url('assets/evento-sala-wide.jpg') center 35% / cover no-repeat;
+            background: url('/assets/evento-sala-wide.jpg') center 35% / cover no-repeat;
             opacity: 0.22;
             filter: saturate(0.4) contrast(1.1);
             pointer-events: none;
@@ -632,7 +637,7 @@
             position: relative;
             background:
                 linear-gradient(to bottom, rgba(18,5,24,0.5), rgba(18,5,24,0.12) 32%, rgba(18,5,24,0.16) 52%, rgba(18,5,24,0.9) 78%, rgba(18,5,24,0.98)),
-                url('assets/todos_mentorados_advm.jpg') center 18% / cover no-repeat;
+                url('/assets/todos_mentorados_advm.jpg') center 18% / cover no-repeat;
             min-height: 92vh;
             display: flex; align-items: flex-end;
             padding: clamp(14rem, 42vh, 24rem) 0 clamp(3rem, 6vw, 4.5rem);
@@ -820,7 +825,7 @@
         .fecho {
             background:
                 linear-gradient(180deg, rgba(18,5,24,0.86), rgba(18,5,24,0.96)),
-                url('assets/evento-turma.jpg') center 30% / cover no-repeat;
+                url('/assets/evento-turma.jpg') center 30% / cover no-repeat;
             text-align: center;
             padding: clamp(5rem, 11vw, 8.5rem) 0;
         }
@@ -843,7 +848,7 @@
             padding: 2.5rem 0 6rem;
         }
         .rodape .wrap { display: flex; flex-wrap: wrap; gap: 1.2rem; align-items: center; justify-content: space-between; }
-        .rodape img { height: 30px; width: auto; filter: brightness(0) invert(1); opacity: 0.65; }
+        .rodape img { width: auto; max-width: 100%; height: auto; max-height: 30px; filter: brightness(0) invert(1); opacity: 0.65; }
         .rodape p { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.06em; color: #6b5f72; }
         .rodape .selo-evento {
             font-family: var(--display); font-weight: 900; text-transform: uppercase;
@@ -875,6 +880,228 @@
             .reveal { opacity: 1; transform: none; transition: none; }
             html { scroll-behavior: auto; }
         }
+    
+        /* ═══════════════════════════════════════
+           V3 · componentes novos (análise 30/09)
+           ═══════════════════════════════════════ */
+
+        /* contador da virada do lote */
+        .virada-chip {
+            display: inline-flex; align-items: center; gap: 0.6rem;
+            padding: 0.55rem 1.15rem;
+            background: rgba(217, 232, 15, 0.12);
+            border: 1px solid rgba(217, 232, 15, 0.45);
+            border-radius: 999px;
+            font-family: var(--mono); font-size: 0.76rem; font-weight: 700;
+            letter-spacing: 0.08em; text-transform: uppercase; color: var(--branco);
+        }
+        .virada-chip b { color: var(--amarelo-ruptura); font-variant-numeric: tabular-nums; }
+        .virada-chip { white-space: nowrap; }
+        @media (max-width: 480px) { .virada-chip { font-size: 0.64rem; padding: 0.5rem 0.9rem; } }
+        .virada-chip::before {
+            content: ''; width: 8px; height: 8px; border-radius: 50%;
+            background: var(--amarelo-ruptura);
+            box-shadow: 0 0 10px var(--amarelo-ruptura);
+            animation: pulsar 1.8s ease-in-out infinite;
+        }
+        @media (prefers-reduced-motion: reduce) { .virada-chip::before { animation: none; } }
+
+        .hero-sec { margin-top: 1.1rem; }
+        .hero-sec a {
+            color: var(--cinza-estrutura); font-size: 0.92rem;
+            text-decoration: underline; text-underline-offset: 4px;
+        }
+        .hero-sec a:hover { color: var(--branco); }
+        .hero-prova-nota {
+            margin-top: 2.1rem;
+            font-family: var(--mono); font-size: 0.73rem;
+            letter-spacing: 0.12em; text-transform: uppercase; color: var(--texto-suave);
+        }
+        .hero-prova-nota b { color: var(--amarelo-ruptura); }
+
+        /* parede de números */
+        .numeros { background: var(--fundo-alt); }
+        .numeros-grade {
+            display: grid; gap: 1rem; margin-top: 2.6rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+        .numero-card {
+            background: var(--card); border: 1px solid var(--card-borda);
+            border-radius: 14px; padding: 1.8rem 1.6rem 1.6rem;
+            display: flex; flex-direction: column; gap: 0.55rem;
+        }
+        .numero-valor {
+            font-family: var(--display); font-weight: 900;
+            font-size: clamp(2.2rem, 4vw, 3rem);
+            color: var(--amarelo-ruptura); line-height: 1; text-transform: uppercase;
+        }
+        .numero-frase { color: var(--branco); font-size: 0.98rem; line-height: 1.55; }
+        .numero-quem {
+            font-family: var(--mono); font-size: 0.72rem;
+            letter-spacing: 0.1em; text-transform: uppercase; color: var(--texto-suave);
+        }
+        .numero-print { margin-top: auto; padding-top: 1rem; }
+        .numero-print img {
+            border-radius: 8px; border: 1px solid var(--card-borda);
+            cursor: zoom-in; width: 100%;
+            height: 340px; object-fit: cover; object-position: top center;
+        }
+        @media (max-width: 520px) { .numero-print img { height: 300px; } }
+        .numeros-acao { text-align: center; margin-top: 2.6rem; }
+
+        /* pra quem é / não é */
+        .pq-grade { display: grid; gap: 1.2rem; grid-template-columns: 1fr 1fr; margin-top: 2.6rem; }
+        @media (max-width: 820px) { .pq-grade { grid-template-columns: 1fr; } }
+        .pq-card {
+            background: var(--card); border: 1px solid var(--card-borda);
+            border-radius: 14px; padding: 1.7rem 1.6rem;
+        }
+        .pq-card h3 { margin-bottom: 1.1rem; }
+        .pq-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+        .pq-card li { display: flex; gap: 0.65rem; color: var(--texto-suave); font-size: 0.95rem; line-height: 1.55; }
+        .pq-sim li::before { content: '✓'; color: var(--amarelo-ruptura); font-weight: 700; flex-shrink: 0; }
+        .pq-nao li::before { content: '✕'; color: var(--roxo-expansao); font-weight: 700; flex-shrink: 0; }
+
+        /* vídeo de objeção (um vídeo + texto lado a lado) */
+        .obj-video {
+            display: grid; gap: 2.2rem; grid-template-columns: 400px 1fr;
+            align-items: center; margin-top: 2.8rem;
+        }
+        @media (max-width: 860px) { .obj-video { grid-template-columns: 1fr; } }
+        .obj-video video {
+            width: 100%; aspect-ratio: 16/9; border-radius: 12px;
+            border: 1px solid var(--card-borda); background: #000;
+        }
+        .obj-video .obj-rotulo {
+            font-family: var(--mono); font-size: 0.72rem; font-weight: 700;
+            letter-spacing: 0.14em; text-transform: uppercase;
+            color: var(--amarelo-ruptura); display: block; margin-bottom: 0.7rem;
+        }
+        .obj-video blockquote { margin: 0.8rem 0 0.5rem; color: var(--branco); font-size: 1.02rem; line-height: 1.6; }
+        .obj-video cite { font-style: normal; font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--texto-suave); }
+
+        /* o caos em 4 letras */
+        .caos-grade {
+            display: grid; gap: 1rem; margin-top: 2.6rem;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        }
+        .caos-card {
+            background: var(--card); border: 1px solid var(--card-borda);
+            border-radius: 14px; padding: 1.7rem 1.5rem;
+        }
+        .caos-letra {
+            font-family: var(--display); font-weight: 900; font-size: 2.6rem;
+            color: var(--amarelo-ruptura); line-height: 1; margin-bottom: 0.7rem;
+        }
+        .caos-card h3 { font-size: 1.02rem; margin-bottom: 0.5rem; }
+        .caos-card p { color: var(--texto-suave); font-size: 0.92rem; line-height: 1.6; }
+        .caos-remate { max-width: 640px; margin: 2.4rem auto 0; text-align: center; color: var(--texto-suave); }
+        .caos-remate b { color: var(--branco); }
+
+        /* quem conduz */
+        .conduz-lista { list-style: none; margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.7rem; }
+        .conduz-lista li { display: flex; gap: 0.7rem; align-items: baseline; flex-wrap: wrap; color: var(--texto-suave); font-size: 0.97rem; }
+        .conduz-lista b { color: var(--branco); }
+        .conduz-lista .frente {
+            font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.1em;
+            text-transform: uppercase; color: var(--amarelo-ruptura);
+            border: 1px solid rgba(217, 232, 15, 0.35); border-radius: 5px; padding: 1px 7px;
+        }
+
+        /* bloco de decisão (fundo lima) */
+        .decisao {
+            background: var(--amarelo-ruptura); color: var(--preto);
+            border-radius: 18px; padding: clamp(1.9rem, 4vw, 3rem);
+            max-width: 720px; margin: 2.8rem auto 0;
+            box-shadow: 0 0 70px rgba(217, 232, 15, 0.22), 0 30px 70px rgba(0, 0, 0, 0.45);
+        }
+        .decisao .virada-chip {
+            background: rgba(0, 0, 0, 0.08); border-color: rgba(0, 0, 0, 0.4);
+            color: var(--preto); margin-bottom: 1.4rem;
+        }
+        .decisao .virada-chip b { color: var(--preto); }
+        .decisao .virada-chip::before { background: var(--preto); box-shadow: none; }
+        .decisao-rotulo {
+            font-family: var(--mono); font-size: 0.72rem; font-weight: 700;
+            letter-spacing: 0.14em; text-transform: uppercase; color: rgba(0, 0, 0, 0.7);
+        }
+        .decisao-preco { display: flex; align-items: baseline; gap: 1.1rem; flex-wrap: wrap; margin: 0.6rem 0 0.2rem; }
+        .decisao-preco .preco-agora {
+            font-family: var(--display); font-weight: 900;
+            font-size: clamp(3.6rem, 9vw, 5.2rem); line-height: 1;
+            letter-spacing: -0.03em; color: var(--preto);
+        }
+        .decisao-preco .preco-agora sup { font-size: 0.35em; font-weight: 800; vertical-align: super; }
+        .decisao-preco .preco-depois { font-size: 0.98rem; color: rgba(0, 0, 0, 0.75); }
+        .decisao-vantagem { font-weight: 700; color: var(--preto); margin-bottom: 1.3rem; }
+        .decisao-entregas { list-style: none; margin: 0 0 1.6rem; display: flex; flex-direction: column; gap: 0.5rem; color: var(--preto); font-size: 0.96rem; }
+        .decisao-entregas li::before { content: '→ '; font-weight: 800; }
+        .btn-comprar {
+            display: block; width: 100%; text-align: center;
+            background: var(--preto); color: var(--branco);
+            font-family: var(--display); font-weight: 800; text-transform: uppercase;
+            letter-spacing: 0.05em; font-size: 1.02rem;
+            padding: 1.2rem 1.4rem; border-radius: 12px; text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .btn-comprar:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35); }
+        .decisao-nota { text-align: center; font-size: 0.8rem; color: rgba(0, 0, 0, 0.7); margin-top: 0.8rem; }
+
+        /* escada de lotes em uma linha */
+        .escada-linha {
+            display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap;
+            margin-top: 1.5rem; font-family: var(--mono); font-size: 0.76rem;
+        }
+        .escada-linha span { padding: 0.5rem 0.85rem; border-radius: 8px; border: 1px solid rgba(0, 0, 0, 0.35); color: rgba(0, 0, 0, 0.8); }
+        .escada-linha .atual { background: var(--preto); color: var(--amarelo-ruptura); border-color: var(--preto); font-weight: 700; }
+
+        /* cartão do sócio */
+        .socio-card {
+            max-width: 720px; margin: 1.2rem auto 0;
+            background: var(--card); border: 1px solid var(--card-borda); border-radius: 14px;
+            padding: 1.5rem 1.7rem;
+            display: flex; align-items: center; justify-content: space-between;
+            gap: 1.2rem; flex-wrap: wrap;
+        }
+        .socio-card .s-rotulo {
+            font-family: var(--mono); font-size: 0.68rem; font-weight: 700;
+            letter-spacing: 0.14em; text-transform: uppercase;
+            color: var(--amarelo-ruptura); display: block; margin-bottom: 0.4rem;
+        }
+        .socio-card .s-txt b { color: var(--amarelo-ruptura); }
+
+        /* dúvidas ao lado do botão */
+        .duvidas { max-width: 720px; margin: 1.8rem auto 0; display: grid; gap: 0.6rem; }
+        .duvidas details {
+            background: transparent; border: 1px solid var(--card-borda);
+            border-radius: 10px; padding: 0.8rem 1.05rem;
+        }
+        .duvidas summary { cursor: pointer; font-size: 0.92rem; color: var(--branco); font-weight: 600; list-style: none; }
+        .duvidas summary::-webkit-details-marker { display: none; }
+        .duvidas p { margin-top: 0.55rem; font-size: 0.88rem; color: var(--texto-suave); line-height: 1.6; }
+
+        /* 1ª edição compacta */
+        .primeira-video { max-width: 760px; margin: 2.6rem auto 0; }
+        .primeira-video video {
+            width: 100%; aspect-ratio: 16/9; border-radius: 12px;
+            border: 1px solid var(--card-borda); background: #000;
+        }
+        .primeira-grade { display: grid; gap: 0.8rem; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 230px; margin-top: 0.9rem; }
+        @media (max-width: 720px) { .primeira-grade { grid-template-columns: 1fr; grid-auto-rows: 210px; } }
+        .primeira-grade figure { margin: 0; border-radius: 10px; overflow: hidden; border: 1px solid var(--card-borda); }
+        .primeira-grade img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.85); }
+
+        /* correção da análise: aviso de preço visível no celular */
+        .topo-aviso { white-space: nowrap; }
+        @media (max-width: 900px) {
+            .topo-aviso { display: inline-flex !important; font-size: 0.7rem; }
+            .aviso-extra { display: none; }
+        }
+        @media (max-width: 680px) {
+            .topo .topo-marca span { display: none; }
+        }
+        .cta-fixo-texto b { font-variant-numeric: tabular-nums; }
+
     </style>
 </head>
 <body>
@@ -885,40 +1112,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="grao"></div>
 
-<!-- ═══ 0 · BARRA FIXA ═══ -->
+<!-- ═══ 0 · BARRA FIXA DO TOPO (preço visível, botão direto no checkout) ═══ -->
 <header class="topo">
     <div class="wrap">
         <a href="#hero" class="topo-marca" style="text-decoration:none;color:inherit">
-            <img src="assets/ADVM_MARCA-07.png" alt="Advocacia de Monopólio">
+            <img src="/assets/ADVM_MARCA-07.png" alt="Advocacia de Monopólio" width="1009" height="287">
             <span>Fim do Caos<i>™</i> · 2ª edição</span>
         </a>
-        <!-- LOTE: atualizar aviso a cada virada de lote -->
-        <div class="topo-aviso">Lote 0 aberto · <b>R$ 147</b> · o preço sobe na virada</div>
-        <a href="#ingressos" class="btn btn-primario">Garantir minha vaga</a>
+        <!-- LOTE: atualizar a cada virada -->
+        <div class="topo-aviso">Lote 0 · <b>R$ 147</b><span class="aviso-extra"> · até a virada</span></div>
+        <a href="https://chk.eduzz.com/G92KE35KWE" target="_blank" rel="noopener" class="btn btn-primario">R$ 147 · Garantir</a>
     </div>
 </header>
 
-<!-- ═══ 1 · HERO ═══ -->
+<!-- ═══ 1 · TOPO COM OFERTA (estrutura A da análise: preço, prazo e checkout direto) ═══ -->
 <section class="hero" id="hero">
     <div class="hero-fundo"></div>
-    <img class="hero-grafismo" src="assets/ADVM_MARCA-18.png" alt="">
+    <img class="hero-grafismo" src="/assets/ADVM_MARCA-18.png" alt="" width="694" height="700">
     <div class="wrap">
-        <!-- Hero enxuto (decisão do Gabriel, 30/09): só headline, uma linha de apoio
-             e data/local. Sem selo de lote, sem parágrafo longo. -->
+        <!-- CONTADOR: a data da virada é PLACEHOLDER, trocar no script lá embaixo -->
+        <div class="reveal"><span class="virada-chip">O lote 0 acaba em <b class="cd">--</b></span></div>
+
+        <div class="hero-tipo reveal" style="margin-top:1.4rem">Imersão presencial para advogados</div>
+        <div class="hero-data-local reveal"><b>06 e 07 de novembro</b> · Casa do Storytelling · Alphaville · SP</div>
+
         <h1 class="reveal">
-            Seja a <span class="destaque">escolha óbvia</span> de alguém
+            Pare de depender de <span class="destaque">indicação</span> para fechar contratos
         </h1>
 
         <p class="hero-sub reveal">
-            Em dois dias você aprenderá como um dos maiores escritórios de advocacia
-            do Brasil opera.
+            Em 2 dias com os 5 sócios da ADVM, você define o nicho que o seu
+            escritório vai dominar e o plano para atrair clientes nele.
         </p>
 
-        <div class="hero-data-local reveal" style="margin-top:1.6rem"><b>06 e 07 de novembro</b> · Alphaville · SP</div>
-
         <div class="hero-acao reveal">
-            <a href="#ingressos" class="btn btn-primario">Quero minha vaga <span class="seta">→</span></a>
+            <a href="https://chk.eduzz.com/G92KE35KWE" target="_blank" rel="noopener" class="btn btn-primario">Garantir minha vaga por R$ 147</a>
         </div>
+        <div class="hero-sec reveal"><a href="#leva">Ver o que você leva ↓</a></div>
+
+        <p class="hero-prova-nota reveal"><b>+90 advogados</b> na 1ª edição · sem gravação e sem replay</p>
     </div>
 </section>
 
@@ -942,130 +1174,166 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </div>
 
-<!-- ═══ 5 · VÍDEO ═══ -->
-<section class="bloco video">
-    <div class="video-halo" aria-hidden="true"></div>
-    <div class="wrap centro">
-        <span class="eyebrow">Entenda o Fim do Caos</span>
-        <h2 class="display">O que aconteceu na <span class="amarelo">primeira edição</span></h2>
-        <p class="lead">Dois dias, sala fechada e uma doutrina apresentada inteira. O resumo de cada dia, como aconteceu.</p>
-
-        <div class="sameday">
-            <div class="sameday-item reveal">
-                <video controls preload="none" playsinline data-poster="assets/poster-sameday1.jpg">
-                    <source src="assets/sameday-dia1.mp4" type="video/mp4">
-                    Seu navegador não reproduz este vídeo.
-                </video>
-                <div class="sameday-rot">
-                    <strong>Dia 1 · A descoberta do território</strong>
-                    <span>1min28</span>
-                </div>
-            </div>
-            <div class="sameday-item reveal">
-                <video controls preload="none" playsinline data-poster="assets/poster-sameday2.jpg">
-                    <source src="assets/sameday-dia2.mp4" type="video/mp4">
-                    Seu navegador não reproduz este vídeo.
-                </video>
-                <div class="sameday-rot">
-                    <strong>Dia 2 · Da doutrina para a prática</strong>
-                    <span>1min34</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ═══ 5b · GALERIA DA 1ª EDIÇÃO ═══ -->
-<section class="galeria">
+<!-- ═══ 3 · PAREDE DE NÚMEROS (primeira prova, para quem sai cedo) ═══ -->
+<section class="bloco numeros" id="resultados">
     <div class="wrap">
         <div class="centro">
-            <span class="eyebrow">Maio de 2026</span>
-            <h2 class="display">A sala que <span class="amarelo">já encheu uma vez</span></h2>
+            <span class="eyebrow">Resultados de mentorados</span>
+            <h2 class="display">O que acontece quando o advogado <span class="amarelo">escolhe um território</span></h2>
+            <p class="lead">Clique no print para ler a conversa inteira.</p>
         </div>
 
-        <div class="galeria-grade">
-            <!-- primeira: a de sala cheia, prova de volume -->
-            <figure class="g-larga g-alta"><img src="assets/mostrar_evento_cheio.jpg" alt="Sala cheia na 1ª edição do Fim do Caos" loading="lazy"></figure>
-            <figure class="g-alta"><img src="assets/mostrar_gente.jpg" alt="Participante do Fim do Caos" loading="lazy"></figure>
-            <figure class="g-alta"><img src="assets/mostrar_gente3.jpg" alt="Advogado acompanhando a palestra" loading="lazy"></figure>
-            <figure class="g-larga"><img src="assets/mostrar_volume.jpg" alt="Plateia numerosa durante a imersão" loading="lazy"></figure>
-            <figure class="g-larga"><img src="assets/mostrar_evento.jpg" alt="Palco e telão da Advocacia de Monopólio" loading="lazy"></figure>
-            <figure class="g-alta"><img src="assets/mostrar_gente2.jpg" alt="Participante do Fim do Caos" loading="lazy"></figure>
-            <figure><img src="assets/mostrar_gente5.jpg" alt="Advogada acompanhando o conteúdo" loading="lazy"></figure>
-            <figure><img src="assets/mostrar_marca.jpg" alt="Material da Advocacia de Monopólio" loading="lazy"></figure>
-            <figure class="g-larga"><img src="assets/mostrar_evento2.jpg" alt="Palestra para a sala cheia" loading="lazy"></figure>
-            <figure class="g-alta"><img src="assets/mostrar_gente4.jpg" alt="Advogada na plateia do evento" loading="lazy"></figure>
-            <figure class="g-alta"><img src="assets/mostrar_gente6.jpg" alt="Advogada durante a imersão" loading="lazy"></figure>
-            <figure class="g-larga"><img src="assets/mostrar_evento_acontecendo.jpg" alt="Bancada de convidados no palco" loading="lazy"></figure>
-            <figure class="g-larga"><img src="assets/evento-mesa-neon.jpg" alt="Participantes trabalhando durante o evento" loading="lazy"></figure>
-            <figure><img src="assets/mostrar_gente7.jpg" alt="Advogadas na plateia" loading="lazy"></figure>
-            <figure><img src="assets/mostrar_gente8.jpg" alt="Advogado concentrado na palestra" loading="lazy"></figure>
+        <div class="numeros-grade">
+            <article class="numero-card reveal">
+                <div class="numero-valor">R$ 45 mil</div>
+                <p class="numero-frase">Primeiro contrato de R$ 45 mil, com o trabalho feito no Instagram.</p>
+                <span class="numero-quem">Ariane Vilas Boas · mentorada ADVM</span>
+                <div class="numero-print"><img src="/assets/depoimento-ariane-contrato.jpeg" alt="Print da conversa da Ariane sobre o contrato de R$ 45 mil" loading="lazy" width="740" height="1600"></div>
+            </article>
+
+            <article class="numero-card reveal">
+                <div class="numero-valor">2 contratos</div>
+                <p class="numero-frase">Dois contratos na mesma semana, de clientes que chegaram pelo Instagram.</p>
+                <span class="numero-quem">Mônica Andrade · mentorada ADVM</span>
+                <div class="numero-print"><img src="/assets/depoimento-monica-contratos.jpeg" alt="Print da conversa da Mônica sobre os dois contratos na mesma semana" loading="lazy" width="740" height="1600"></div>
+            </article>
+
+            <article class="numero-card reveal">
+                <div class="numero-valor">R$ 7 mil</div>
+                <p class="numero-frase">R$ 7 mil com uma cliente que já tinha sumido duas vezes.</p>
+                <span class="numero-quem">Brenda Wobeto · mentorada ADVM</span>
+                <div class="numero-print"><img src="/assets/depoimento-brenda-contrato.jpeg" alt="Print da conversa da Brenda sobre o contrato de R$ 7 mil" loading="lazy" width="740" height="1600"></div>
+            </article>
         </div>
 
-        <p class="galeria-nota">1ª edição · 29 e 30 de maio de 2026 · <b>+90 advogados presentes</b></p>
-    </div>
-</section>
-
-<!-- ═══ 6 · FRASE DE TRANSIÇÃO ═══ -->
-<section class="frase-caos">
-    <div class="wrap centro">
-        <h2 class="display frase-caos-txt reveal">Dois dias de porta fechada pra <span class="amarelo">matar o caos na raiz</span></h2>
-    </div>
-</section>
-
-<!-- ═══ 7 · POR QUE AGORA ═══ -->
-<section class="agora">
-    <div class="wrap agora-grade">
-        <div class="reveal">
-            <span class="eyebrow">Momento decisivo</span>
-            <h2 class="display" style="margin-top:1rem">Por que fazer isso <span class="destaque">agora?</span></h2>
-            <p style="margin-top:1rem">Porque 2027 já está sendo dividido.</p>
-            <ul class="agora-lista">
-                <li>Advogado entrando no mercado em volume recorde</li>
-                <li>IA derrubando o preço da hora técnica</li>
-                <li>Cliente pesquisando antes de pedir indicação</li>
-            </ul>
-        </div>
-
-        <div class="agora-texto reveal">
-            <p>Vai ser <b>duro pra quem continua genérico</b>. E vai ser o melhor ano da carreira pra quem tiver território nomeado e defendido.</p>
-            <p>Ninguém aqui vai assistir de camarote mais advogado bom quebrando por falta de posição.</p>
-            <p>O Fim do Caos é a sala onde a doutrina que <b>criou o Direito da Estética como mercado</b> é aberta pra você aplicar na sua área.</p>
-            <p class="agora-remate">Em 06 e 07 de novembro, você decide de que lado dessa divisão vai estar.</p>
+        <div class="numeros-acao reveal">
+            <a href="https://chk.eduzz.com/G92KE35KWE" target="_blank" rel="noopener" class="btn btn-primario">Garantir minha vaga por R$ 147</a>
         </div>
     </div>
 </section>
 
-<!-- ═══ 8 · PALCO (mentores/diretores da ADVM) ═══ -->
-<section class="bloco palco">
-    <div class="wrap split">
-        <figure class="palco-figura reveal">
-            <img src="assets/mentores_advm.jpg" alt="Os mentores da Advocacia de Monopólio no palco da 1ª edição" loading="lazy">
-            <figcaption>Os mentores da ADVM no palco da 1ª edição</figcaption>
-        </figure>
-
-        <div class="split-texto reveal">
-            <span class="eyebrow">Quem sobe no palco</span>
-            <h2 class="display">Quem já esteve <span class="amarelo">exatamente onde você está</span></h2>
-
-            <p>Quem conduz os dois dias são os <b>diretores da Advocacia de Monopólio</b>. Cada um sobe no palco pra falar da área que dirige e que opera no dia a dia: posicionamento, vendas, governança, eficiência e encantamento de cliente.</p>
-            <p>Ninguém aqui ensina teoria emprestada. O que você vai ouvir é o que essa equipe aplica todos os dias dentro da própria operação e nos escritórios dos mentorados.</p>
-            <p>À frente da doutrina, <b>Guilherme Cattani</b>: advogado que estava perdido, cheio de técnica e sem direção, até parar de competir e criar território. Monopolizou o Direito da Estética, um mercado que não existia antes dele nomear, ocupar e fechar as fronteiras.</p>
-        </div>
+<!-- ═══ 3b · FAIXA DOS MENTORADOS (junto dos resultados) ═══ -->
+<section class="mentorados">
+    <div class="wrap">
+        <span class="eyebrow">A foto que resume</span>
+        <h2 class="display">Todos nesta foto são <span class="amarelo">mentorados da ADVM</span></h2>
+        <p class="lead">Advogados que compraram a causa do território, aplicaram a doutrina no próprio escritório e <b>têm resultado pra mostrar</b>. Em novembro, a sala é sua.</p>
     </div>
 </section>
 
-<!-- ═══ 9 · O QUE VOCÊ LEVA ═══ -->
-<section class="bloco leva">
+<!-- ═══ 4 · PRA QUEM É (o advogado se reconhece em 3 linhas) ═══ -->
+<section class="bloco pq" id="paraquem">
     <div class="wrap">
         <div class="centro">
-            <span class="eyebrow">O que você vai levar</span>
-            <h2 class="display">Dois dias que valem pelos <span class="amarelo">próximos dez anos</span></h2>
+            <span class="eyebrow">Antes de continuar</span>
+            <h2 class="display">Pra quem é <span class="amarelo">esta sala</span></h2>
+        </div>
+
+        <div class="pq-grade">
+            <div class="pq-card pq-sim reveal">
+                <h3 class="display">É pra você se</h3>
+                <ul>
+                    <li>Já tem escritório e atende clientes todos os meses</li>
+                    <li>Fatura, mas o próximo cliente ainda depende de indicação</li>
+                    <li>Quer nichar sem abrir mão da carteira que já construiu</li>
+                    <li>Está cansado de disputar preço com advogado que entrega menos</li>
+                </ul>
+            </div>
+            <div class="pq-card pq-nao reveal">
+                <h3 class="display">Ainda não é, se</h3>
+                <ul>
+                    <li>Você ainda não advoga na ponta, atendendo cliente real</li>
+                    <li>Procura fórmula pronta que dispense decisão e trabalho</li>
+                    <li>Quer conteúdo gravado pra assistir depois: aqui nada é gravado</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- objeção nº 1 respondida logo aqui: medo de perder cliente ao nichar -->
+        <div class="obj-video reveal">
+            <video controls preload="none" playsinline data-poster="/assets/poster-dep03.jpg">
+                <source src="/assets/dep03.mp4" type="video/mp4">
+            </video>
+            <div>
+                <span class="obj-rotulo">O medo que trava todo mundo: "vou perder clientes se nichar"</span>
+                <blockquote>"Saio daqui procurando nichar ainda mais o meu público, para que eu consiga quadruplicar meus honorários. A gente tem muito medo de nichar e acaba perdendo cliente por isso."</blockquote>
+                <cite>Isabelle · Direito da saúde · ABC Paulista · gravado na 1ª edição</cite>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ 5 · O CAOS DO ESCRITÓRIO (nomeia a dor) ═══ -->
+<section class="bloco caos" style="background:var(--fundo-alt)">
+    <div class="wrap">
+        <div class="centro">
+            <span class="eyebrow">O problema tem nome</span>
+            <h2 class="display">O caos do escritório tem <span class="amarelo">4 letras</span></h2>
+        </div>
+
+        <div class="caos-grade">
+            <article class="caos-card reveal">
+                <div class="caos-letra">C</div>
+                <h3 class="display">Crescimento sem direção</h3>
+                <p>O escritório cresce no esforço, caso a caso, sem saber qual mercado está construindo.</p>
+            </article>
+            <article class="caos-card reveal">
+                <div class="caos-letra">A</div>
+                <h3 class="display">Aquisição sem previsibilidade</h3>
+                <p>Segunda-feira chega sem previsão de cliente novo. A agenda depende de quem indica.</p>
+            </article>
+            <article class="caos-card reveal">
+                <div class="caos-letra">O</div>
+                <h3 class="display">Operação sobrecarregada</h3>
+                <p>Noite virada em caso que você nem queria ter pego, e desconto dado por medo de perder o negócio.</p>
+            </article>
+            <article class="caos-card reveal">
+                <div class="caos-letra">S</div>
+                <h3 class="display">Sócio como gargalo</h3>
+                <p>Tudo passa por você. O escritório para quando você para.</p>
+            </article>
+        </div>
+
+        <p class="caos-remate reveal">Esse caos parece emocional. <b>Ele é estrutural</b>: nasce de uma causa só, a atenção fragmentada, a sua e a do mercado. E enquanto a causa continuar viva, dezembro chega e você repete a frase do ano passado: ano que vem será diferente.</p>
+    </div>
+</section>
+
+<!-- ═══ 6 · TERRITÓRIO, NÃO NICHO (a virada, com o caso que prova) ═══ -->
+<section class="bloco territorio">
+    <div class="wrap">
+        <div class="centro">
+            <span class="eyebrow">A virada</span>
+            <h2 class="display">Território, <span class="amarelo">não nicho</span></h2>
+            <p class="lead">O mercado jurídico é um campo infinito pra quem se diferencia e finito pra quem generaliza. <b>Existem tribos inteiras sem nenhum advogado que fale a língua delas</b>: advogado de ubers, de logísticas, de mecânicos. Quando você concentra a sua atenção num espaço só, o mercado devolve na mesma moeda.</p>
+        </div>
+
+        <div class="obj-video reveal">
+            <video controls preload="none" playsinline data-poster="/assets/poster-dep04.jpg">
+                <source src="/assets/dep04.mp4" type="video/mp4">
+            </video>
+            <div>
+                <span class="obj-rotulo">Funciona na minha área? O caso que responde</span>
+                <blockquote>O Guilherme Cattani era um advogado cheio de técnica e sem direção. Ele nomeou um mercado que não existia, o <b style="color:var(--amarelo-ruptura)">Direito da Estética</b>, ocupou antes de todo mundo e fechou as fronteiras. Hoje esse mercado tem nome, tem doutrina e tem dono.</blockquote>
+                <cite>No vídeo: Barbara · Direito médico veterinário · outro território que ninguém ocupava</cite>
+            </div>
+        </div>
+
+        <p class="caos-remate reveal">E o momento importa: 2027 já está sendo dividido. Advogado entrando no mercado em volume recorde, IA derrubando o preço da hora técnica, cliente pesquisando antes de aceitar indicação. <b>Posição se constrói antes da divisão, não depois.</b></p>
+    </div>
+</section>
+
+<!-- ═══ 7 · O QUE VOCÊ LEVA + PROGRAMAÇÃO ═══ -->
+<section class="bloco leva" id="leva">
+    <div class="wrap">
+        <div class="centro">
+            <span class="eyebrow">Entrega concreta</span>
+            <h2 class="display">O que você leva <span class="amarelo">dos 2 dias</span></h2>
+            <p class="lead">06 e 07 de novembro, das <b>08h30 às 18h00</b>, em Alphaville. Repare que a palavra é <b>resolvido</b>, não apresentado.</p>
         </div>
 
         <div class="leva-lista">
             <article class="leva-card reveal">
-                <figure class="leva-figura"><img src="assets/evento-sala-wide.jpg" alt="Sala do Fim do Caos durante a palestra sobre território" loading="lazy"></figure>
+                <figure class="leva-figura"><img src="/assets/evento-sala-wide.jpg" alt="Sala do Fim do Caos durante a palestra sobre território" loading="lazy" width="1920" height="1280"></figure>
                 <div class="leva-corpo">
                     <div class="leva-num">1</div>
                     <h3 class="display">Mapa do <span class="destaque">seu território</span></h3>
@@ -1074,7 +1342,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </article>
 
             <article class="leva-card reveal">
-                <figure class="leva-figura"><img src="assets/evento-palestrante-1.jpg" alt="Palestra sobre narrativa e posicionamento" loading="lazy"></figure>
+                <figure class="leva-figura"><img src="/assets/evento-palestrante-1.jpg" alt="Palestra sobre narrativa e posicionamento" loading="lazy" width="1400" height="933"></figure>
                 <div class="leva-corpo">
                     <div class="leva-num">2</div>
                     <h3 class="display">A narrativa que <span class="destaque">atrai o cliente certo</span></h3>
@@ -1083,16 +1351,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </article>
 
             <article class="leva-card reveal">
-                <figure class="leva-figura"><img src="assets/evento-venda-palco.jpg" alt="Palestra sobre venda no Fim do Caos" loading="lazy" style="object-position: 50% 18%"></figure>
+                <figure class="leva-figura"><img src="/assets/evento-venda-palco.jpg" alt="Palestra sobre venda no Fim do Caos" loading="lazy" width="1200" height="2133" style="object-position: 50% 18%"></figure>
                 <div class="leva-corpo">
                     <div class="leva-num">3</div>
                     <h3 class="display">Venda <span class="destaque">sem parecer venda</span></h3>
-                    <p>Você aprenderá como transformar o desejo em dinheiro. <b>Como criar canais de aquisição de clientes e que serviços vender para a sua tribo monopolizada.</b></p>
+                    <p>Você aprenderá como transformar o desejo em dinheiro. <b>Como criar canais de aquisição de clientes e que serviços vender para a sua tribo monopolizada.</b> Foi daqui que saiu a técnica que rendeu à Brenda um contrato de R$ 7 mil com uma cliente que tinha sumido duas vezes.</p>
                 </div>
             </article>
 
             <article class="leva-card reveal">
-                <figure class="leva-figura"><img src="assets/evento-turma.jpg" alt="Turma reunida na 1ª edição" loading="lazy"></figure>
+                <figure class="leva-figura"><img src="/assets/evento-turma.jpg" alt="Turma reunida na 1ª edição" loading="lazy" width="1600" height="1067"></figure>
                 <div class="leva-corpo">
                     <div class="leva-num">4</div>
                     <h3 class="display">Uma sala inteira de advogados <span class="destaque">no mesmo jogo</span></h3>
@@ -1102,215 +1370,120 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div class="centro" style="margin-top:3rem">
-            <a href="#ingressos" class="btn btn-primario">Quero esse mapa <span class="seta">→</span></a>
+            <a href="https://chk.eduzz.com/G92KE35KWE" target="_blank" rel="noopener" class="btn btn-primario">Garantir minha vaga por R$ 147</a>
         </div>
     </div>
 </section>
 
-<!-- ═══ 10 · PROVA SOCIAL ═══ -->
-<section class="bloco prova">
-    <div class="wrap">
-        <div class="centro">
-            <span class="eyebrow">Quem já aplicou</span>
-            <h2 class="display">O que acontece depois que o advogado <span class="amarelo">escolhe um território</span></h2>
-            <p class="lead">Conversas reais de mentorados. Arraste para o lado, clique para ampliar.</p>
-        </div>
-
-        <div class="prova-pista" id="pista">
-            <div class="prova-print"><img src="assets/depoimento-alvaro-mentoria.jpeg" alt="Depoimento de mentorado" loading="lazy"></div>
-            <div class="prova-print"><img src="assets/depoimento-ariane-contrato.jpeg" alt="Depoimento de mentorado" loading="lazy"></div>
-            <div class="prova-print"><img src="assets/depoimento-brenda-contrato.jpeg" alt="Depoimento de mentorado" loading="lazy"></div>
-            <div class="prova-print"><img src="assets/depoimento-thayassa-reuniao.jpeg" alt="Depoimento de mentorado" loading="lazy"></div>
-            <div class="prova-print"><img src="assets/depoimento-monica-contratos.jpeg" alt="Depoimento de mentorado" loading="lazy"></div>
-            <div class="prova-print"><img src="assets/depoimento-nathalia-recchiutti.jpeg" alt="Depoimento de mentorado" loading="lazy"></div>
-            <div class="prova-print"><img src="assets/depoimento-tatiana-alvaro.jpeg" alt="Depoimento de mentorado" loading="lazy"></div>
-            <div class="prova-print"><img src="assets/depoimento-primeira-reuniao.jpeg" alt="Depoimento de mentorado" loading="lazy"></div>
-            <div class="prova-print"><img src="assets/depoimento-indicacao-cliente.jpeg" alt="Depoimento de mentorado" loading="lazy"></div>
-            <div class="prova-print"><img src="assets/depoimento-ariane-audio-mudo.jpeg" alt="Depoimento de mentorado" loading="lazy"></div>
-        </div>
-
-    </div>
-</section>
-
-<!-- ═══ 10b · DEPOIMENTOS EM VÍDEO (1ª edição) ═══ -->
-<section class="bloco prova" style="background:var(--fundo-alt)">
-    <div class="wrap">
-        <div class="centro">
-            <span class="eyebrow">Gravado na saída da sala</span>
-            <h2 class="display">O que eles disseram <span class="amarelo">ainda dentro do evento</span></h2>
-            <p class="lead">Sem roteiro e sem edição de conteúdo. Advogados de áreas diferentes, no intervalo da 1ª edição.</p>
-        </div>
-
-        <div class="prova-videos">
-            <figure class="prova-video reveal">
-                <video controls preload="none" playsinline data-poster="assets/poster-dep05.jpg">
-                    <source src="assets/dep05.mp4" type="video/mp4">
-                </video>
-                <figcaption>
-                    <p class="prova-fala">Estou saindo daqui outra Lívia, outra advogada. Tinha uma boa expectativa, mas está superando qualquer coisa que eu poderia imaginar.</p>
-                    <div class="prova-quem"><strong>Lívia</strong><span>Cível, imobiliário e família · São Paulo</span></div>
-                </figcaption>
-            </figure>
-
-            <figure class="prova-video reveal">
-                <video controls preload="none" playsinline data-poster="assets/poster-dep03.jpg">
-                    <source src="assets/dep03.mp4" type="video/mp4">
-                </video>
-                <figcaption>
-                    <p class="prova-fala">Saio daqui procurando nichar ainda mais o meu público, para que eu consiga quadruplicar meus honorários. A gente tem muito medo de nichar e acaba perdendo cliente por isso.</p>
-                    <div class="prova-quem"><strong>Isabelle</strong><span>Direito da saúde · ABC Paulista</span></div>
-                </figcaption>
-            </figure>
-
-            <figure class="prova-video reveal">
-                <video controls preload="none" playsinline data-poster="assets/poster-dep06.jpg">
-                    <source src="assets/dep06.mp4" type="video/mp4">
-                </video>
-                <figcaption>
-                    <p class="prova-fala">O sentimento é sair daqui inconformado com a forma que a gente trabalha hoje. Quem deixa de vir num evento desses acaba perdendo qualidade de vida.</p>
-                    <div class="prova-quem"><strong>Lucas</strong><span>Escritório Andrade Reis · Itapema, SC</span></div>
-                </figcaption>
-            </figure>
-
-            <figure class="prova-video reveal">
-                <video controls preload="none" playsinline data-poster="assets/poster-dep04.jpg">
-                    <source src="assets/dep04.mp4" type="video/mp4">
-                </video>
-                <figcaption>
-                    <p class="prova-fala">É mais importante o cliente saber que você resolve o problema dele do que você ficar falando de jurisprudência. Ele deixou a nossa cabeça fritando.</p>
-                    <div class="prova-quem"><strong>Barbara</strong><span>Direito médico veterinário · ABC Paulista</span></div>
-                </figcaption>
-            </figure>
-
-            <figure class="prova-video reveal">
-                <video controls preload="none" playsinline data-poster="assets/poster-dep01.jpg">
-                    <source src="assets/dep01.mp4" type="video/mp4">
-                </video>
-                <figcaption>
-                    <p class="prova-fala">Tenho 23 anos e estou começando agora. Se você souber escolher o público e para quem quer trabalhar, dá pra fazer 50 anos de carreira em 5.</p>
-                    <div class="prova-quem"><strong>Maria Antônia</strong><span>Direito digital · início de carreira</span></div>
-                </figcaption>
-            </figure>
-
-            <figure class="prova-video reveal">
-                <video controls preload="none" playsinline data-poster="assets/poster-dep02.jpg">
-                    <source src="assets/dep02.mp4" type="video/mp4">
-                </video>
-                <figcaption>
-                    <p class="prova-fala">Ele veio mostrando outra forma de enxergar a advocacia. Tenho certeza que a minha profissão vai mudar totalmente depois desse evento.</p>
-                    <div class="prova-quem"><strong>Julyane</strong><span>Chagas e Sampaio Advocacia</span></div>
-                </figcaption>
-            </figure>
-        </div>
-    </div>
-</section>
-
-<div class="lightbox" id="lightbox"><img src="" alt="Depoimento ampliado" id="lightbox-img"></div>
-
-<!-- ═══ 11 · FAIXA DOS MENTORADOS ═══ -->
-<section class="mentorados">
-    <div class="wrap">
-        <span class="eyebrow">A foto que resume</span>
-        <h2 class="display">Todos nesta foto são <span class="amarelo">mentorados da ADVM</span></h2>
-        <p class="lead">Advogados que compraram a causa do território, aplicaram a doutrina no próprio escritório e <b>têm resultado pra mostrar</b>. Em novembro, a sala é sua.</p>
-    </div>
-</section>
-
-<!-- ═══ 12 · IMPOSTO DO CAOS ═══ -->
-<section class="bloco imposto">
+<!-- ═══ 8 · QUEM CONDUZ (os 5 sócios, cada um com a sua frente) ═══ -->
+<section class="bloco palco">
     <div class="wrap split">
-        <div class="reveal">
-            <span class="eyebrow">Agora a pergunta é</span>
-            <h2 class="display" style="margin:1rem 0 1.8rem">Quanto custa <span class="amarelo">continuar no caos?</span></h2>
+        <figure class="palco-figura reveal">
+            <img src="/assets/mentores_advm.jpg" alt="Os sócios da Advocacia de Monopólio no palco da 1ª edição" loading="lazy" width="1600" height="1067">
+            <figcaption>Os sócios da ADVM no palco da 1ª edição</figcaption>
+        </figure>
 
-            <ul class="imposto-lista imposto-grande">
-                <li><span class="x">✕</span> <span>Virar noite em caso que você nem queria ter pego</span></li>
-                <li><span class="x">✕</span> <span>Não saber quando aparece o próximo cliente</span></li>
-                <li><span class="x">✕</span> <span>Dar desconto por medo de perder o negócio</span></li>
-                <li><span class="x">✕</span> <span>Mais um ano em que você dirá: <b>ano que vem será diferente</b></span></li>
+        <div class="split-texto reveal">
+            <span class="eyebrow">Quem conduz os 2 dias</span>
+            <h2 class="display">5 sócios, <span class="amarelo">5 frentes</span></h2>
+            <p style="margin-top:1rem">Cada um opera no dia a dia a área que ensina no palco, na própria ADVM e nos escritórios dos mentorados. Ninguém aqui ensina teoria emprestada.</p>
+            <ul class="conduz-lista">
+                <li><b>Eduardo Matzenbacher</b> <span class="frente">Governança</span></li>
+                <li><b>Guilherme Cattani</b> <span class="frente">Posicionamento e marketing</span></li>
+                <li><b>Gabriel Bellini</b> <span class="frente">Vendas</span></li>
+                <li><b>Maitê Guerra</b> <span class="frente">Produtividade</span></li>
+                <li><b>Ana Lúcia Bittencourt</b> <span class="frente">Persuasão</span></li>
             </ul>
         </div>
-
-        <figure class="split-figura reveal">
-            <img src="assets/cadeira-monopolio.jpg" alt="A cadeira do monopólio" loading="lazy">
-        </figure>
     </div>
 </section>
 
-<!-- ═══ 13 · INGRESSOS ═══ -->
+<!-- ═══ 9 · SEU INGRESSO (bloco de decisão; sem animação de entrada, por decisão da análise) ═══ -->
 <section class="bloco ingressos" id="ingressos">
     <div class="wrap">
         <div class="centro">
             <span class="eyebrow">Hora de decidir</span>
-            <h2 class="display">Escolha <span class="amarelo">seu lote</span></h2>
-            <p class="lead">
-                Mesmo evento, mesmas entregas. O que muda é quanto você paga por ter decidido antes.
-                <b>Quando o lote vira, o preço sobe e não volta.</b>
-            </p>
+            <h2 class="display">Seu <span class="amarelo">ingresso</span></h2>
         </div>
 
-        <!-- LOTES: a cada virada, mover .lote-ativo, trocar as .lote-fechado e atualizar
-             os avisos do topo, do hero e do CTA fixo. Critério de virada é decisão interna:
-             a página nunca diz quando nem por quê. -->
-        <div class="lotes">
-            <article class="lote lote-ativo reveal">
-                <span class="lote-selo">Aberto agora</span>
-                <div class="lote-nome">Lote 0</div>
-                <div class="lote-preco"><span class="cifrao">R$</span>147</div>
-                <div class="lote-vagas">Preço de abertura</div>
-                <p class="lote-virada">O menor valor que esse ingresso vai ter. Vale só enquanto o lote 0 estiver aberto.</p>
-                <a href="https://chk.eduzz.com/G92KE35KWE" target="_blank" rel="noopener" class="btn btn-primario">Garantir por R$ 147</a>
-            </article>
-
-            <article class="lote lote-fechado reveal">
-                <div class="lote-nome">Lote 1</div>
-                <div class="lote-preco"><span class="cifrao">R$</span>297</div>
-                <div class="lote-vagas">Em breve</div>
-                <p class="lote-virada">Abre na virada do lote 0.</p>
-                <span class="btn btn-vazado">Ainda não abriu</span>
-            </article>
-
-            <article class="lote lote-fechado reveal">
-                <div class="lote-nome">Lote 2</div>
-                <div class="lote-preco"><span class="cifrao">R$</span>397</div>
-                <div class="lote-vagas">Em breve</div>
-                <p class="lote-virada">Abre na virada do lote 1.</p>
-                <span class="btn btn-vazado">Ainda não abriu</span>
-            </article>
-
-            <article class="lote lote-fechado reveal">
-                <div class="lote-nome">Lote 3</div>
-                <div class="lote-preco"><span class="cifrao">R$</span>497</div>
-                <div class="lote-vagas">Em breve</div>
-                <p class="lote-virada">Último lote da segunda edição.</p>
-                <span class="btn btn-vazado">Ainda não abriu</span>
-            </article>
-        </div>
-
-        <div class="socios reveal">
-            <div class="socios-texto">
-                <span class="socios-etiqueta">Condição para sócios</span>
-                Escritório que manda dois: o <b>segundo ingresso sai com 50% de desconto.</b>
+        <!-- âncora dos botões: o cartão do preço, não o título da seção -->
+        <div class="decisao" id="lote-0">
+            <span class="virada-chip">O lote 0 vira em <b class="cd">--</b></span>
+            <div class="decisao-rotulo">Ingresso Fim do Caos · 2ª edição · 06 e 07/11</div>
+            <div class="decisao-preco">
+                <div class="preco-agora"><sup>R$</sup>147</div>
+                <div class="preco-depois">no último lote, <s>R$ 497</s></div>
             </div>
-            <a href="https://chk.eduzz.com/G92KE35KWE" target="_blank" rel="noopener" class="btn btn-vazado">Quero para dois <span class="seta">→</span></a>
+            <p class="decisao-vantagem">Hoje, R$ 350 a menos do que vai custar no fim.</p>
+            <ul class="decisao-entregas">
+                <li>O mapa do seu território</li>
+                <li>A narrativa que atrai o cliente certo</li>
+                <li>Como vender sem parecer venda</li>
+                <li>Uma sala de advogados no mesmo jogo</li>
+            </ul>
+            <a href="https://chk.eduzz.com/G92KE35KWE" target="_blank" rel="noopener" class="btn-comprar">Garantir minha vaga por R$ 147</a>
+            <p class="decisao-nota">Pagamento seguro pela Eduzz · capacidade limitada ao espaço físico</p>
+            <!-- ESCADA: datas de virada são decisão interna; publicar quando definidas -->
+            <div class="escada-linha">
+                <span class="atual">R$ 147 · hoje</span>
+                <span>R$ 297 · lote 1</span>
+                <span>R$ 397 · lote 2</span>
+                <span>R$ 497 · até 05/11</span>
+            </div>
         </div>
 
-        <div class="contagem reveal" id="contagem">
-            <div class="contagem-item"><div class="contagem-num" id="cd-dias">--</div><div class="contagem-rot">dias</div></div>
-            <div class="contagem-item"><div class="contagem-num" id="cd-horas">--</div><div class="contagem-rot">horas</div></div>
-            <div class="contagem-item"><div class="contagem-num" id="cd-min">--</div><div class="contagem-rot">min</div></div>
-            <div class="contagem-item"><div class="contagem-num" id="cd-seg">--</div><div class="contagem-rot">seg</div></div>
+        <div class="socio-card">
+            <div class="s-txt">
+                <span class="s-rotulo">Vai com seu sócio?</span>
+                2 ingressos por <b>R$ 220,50</b> · sai R$ 110,25 por pessoa. Quem decide com o sócio decide junto.
+            </div>
+            <a href="https://chk.eduzz.com/G92KE35KWE" target="_blank" rel="noopener" class="btn btn-vazado">Garantir 2 por R$ 220,50 <span class="seta">→</span></a>
         </div>
-        <p class="centro" style="margin-top:0.9rem"><span class="btn-nota">para o Fim do Caos 2ª edição</span></p>
 
-        <div class="ingressos-acao">
-            <a href="https://chk.eduzz.com/G92KE35KWE" target="_blank" rel="noopener" class="btn btn-primario">Garantir minha vaga no lote 0 <span class="seta">→</span></a>
-            <span class="btn-nota">Pagamento seguro · Capacidade limitada ao espaço físico</span>
+        <!-- dúvidas respondidas na hora do clique -->
+        <div class="duvidas">
+            <details>
+                <summary>Isso é venda de mentoria disfarçada?</summary>
+                <p>O evento é o evento. Existe uma mentoria e ela é apresentada, mas os dois dias entregam sozinhos. Quem sair sem comprar nada sai com o mapa.</p>
+            </details>
+            <details>
+                <summary>Advogo há pouco tempo. Faz sentido pra mim?</summary>
+                <p>Faz, desde que você já atenda cliente. Território se desenha em cima de prática real.</p>
+            </details>
+            <details>
+                <summary>O evento é gravado?</summary>
+                <p>Não. Sem gravação, sem replay, sem material vazando depois. O que acontece na sala fica na sala.</p>
+            </details>
         </div>
     </div>
 </section>
 
-<!-- ═══ 14 · COMO CHEGAR ═══ -->
+<!-- ═══ 10 · A 1ª EDIÇÃO (para quem ainda hesita: 1 vídeo e 3 fotos) ═══ -->
+<section class="bloco video">
+    <div class="video-halo" aria-hidden="true"></div>
+    <div class="wrap centro">
+        <span class="eyebrow">Maio de 2026</span>
+        <h2 class="display">A sala que <span class="amarelo">já encheu uma vez</span></h2>
+        <p class="lead">O resumo do primeiro dia da 1ª edição, como aconteceu.</p>
+
+        <div class="primeira-video reveal">
+            <video controls preload="none" playsinline data-poster="/assets/poster-sameday1.jpg">
+                <source src="/assets/sameday-dia1.mp4" type="video/mp4">
+                Seu navegador não reproduz este vídeo.
+            </video>
+        </div>
+
+        <div class="primeira-grade reveal">
+            <figure><img src="/assets/mostrar_evento_cheio.jpg" alt="Sala cheia na 1ª edição do Fim do Caos" loading="lazy" width="1600" height="1067"></figure>
+            <figure><img src="/assets/mostrar_volume.jpg" alt="Plateia numerosa durante a imersão" loading="lazy" width="1400" height="933"></figure>
+            <figure><img src="/assets/mostrar_evento.jpg" alt="Palco e telão da Advocacia de Monopólio" loading="lazy" width="1400" height="933"></figure>
+        </div>
+
+        <p class="galeria-nota">1ª edição · 29 e 30 de maio de 2026 · <b>+90 advogados presentes</b></p>
+    </div>
+</section>
+
+<!-- ═══ 11 · LOCAL E COMO CHEGAR (3 em cada 4 visitas vêm de fora de SP) ═══ -->
 <section class="bloco local">
     <div class="wrap">
         <div class="centro">
@@ -1324,20 +1497,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <p><b>Av. Sagitário, 138</b><br>Alphaville Conde II<br>Barueri, SP</p>
             </div>
             <div class="local-card reveal">
-                <h4>Data</h4>
-                <p><b>06 e 07 de novembro de 2026</b><br>Sexta e sábado</p>
+                <h4>Data e horário</h4>
+                <p><b>06 e 07 de novembro</b><br>Sexta e sábado, das <b>08h30 às 18h00</b></p>
             </div>
             <div class="local-card reveal">
-                <h4>Horário</h4>
-                <p><b>08h30 às 18h00</b><br>Nos dois dias</p>
+                <h4>Pra quem vem de fora</h4>
+                <ul>
+                    <li>Hotéis a menos de 10 minutos</li>
+                    <li>Congonhas: cerca de 40 min de carro</li>
+                    <li>Guarulhos: cerca de 50 min de carro</li>
+                </ul>
             </div>
             <div class="local-card reveal">
                 <h4>Facilidades</h4>
                 <ul>
                     <li>Estacionamento no local</li>
                     <li>30 minutos de Pinheiros</li>
-                    <li>Hotéis a menos de 10 minutos</li>
                 </ul>
+            </div>
+        </div>
+
+        <div class="obj-video reveal" style="margin-top:2.6rem">
+            <video controls preload="none" playsinline data-poster="/assets/poster-dep06.jpg">
+                <source src="/assets/dep06.mp4" type="video/mp4">
+            </video>
+            <div>
+                <span class="obj-rotulo">Vale a pena parar 2 dias e viajar pra isso?</span>
+                <blockquote>"O sentimento é sair daqui inconformado com a forma que a gente trabalha hoje. Quem deixa de vir num evento desses acaba perdendo qualidade de vida."</blockquote>
+                <cite>Lucas · Escritório Andrade Reis · veio de Itapema, SC</cite>
             </div>
         </div>
 
@@ -1350,7 +1537,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </section>
 
-<!-- ═══ 15 · FAQ ═══ -->
+<!-- ═══ 12 · FAQ ═══ -->
 <section class="bloco faq">
     <div class="wrap">
         <div class="centro">
@@ -1360,6 +1547,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="faq-lista">
             <details class="faq-item" open>
+                <summary>Qual o horário dos dois dias?<span class="sinal"></span></summary>
+                <div class="faq-resposta">Das 08h30 às 18h00, na sexta e no sábado. Chegue com 30 minutos de antecedência no primeiro dia para o credenciamento.</div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Vou conseguir nichar sem perder os clientes que já tenho?<span class="sinal"></span></summary>
+                <div class="faq-resposta">Essa é a dúvida mais comum da sala, e é exatamente o que o mapa do território resolve: o recorte se desenha em cima da carteira que você já tem, sem abandonar ninguém. Boa parte da sala chega sem nicho e sai com um recorte diferente do que imaginava.</div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Posso levar meu sócio?<span class="sinal"></span></summary>
+                <div class="faq-resposta">Pode, e compensa: na compra de dois ingressos, o segundo sai com 50% de desconto. Os dois ingressos ficam em R$ 220,50 no lote 0.</div>
+            </details>
+
+            <!-- PENDENTE: política de transferência a definir pelo Gabriel -->
+            <details class="faq-item pendente">
+                <summary>E se eu não puder ir?<span class="sinal"></span></summary>
+                <div class="faq-resposta">A confirmar. A política de transferência de titularidade será publicada aqui.</div>
+            </details>
+
+            <details class="faq-item">
                 <summary>O evento é gravado?<span class="sinal"></span></summary>
                 <div class="faq-resposta">Não. Sem gravação, sem replay, sem material vazando depois. O que acontece na sala fica na sala, e é por isso que a conversa é honesta.</div>
             </details>
@@ -1368,33 +1576,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <summary>Sou advogado há pouco tempo. Faz sentido pra mim?<span class="sinal"></span></summary>
                 <div class="faq-resposta">Faz, desde que você já atenda cliente. Território se desenha em cima de prática real. Quem ainda não advoga na ponta vai aproveitar menos.</div>
             </details>
-
-            <details class="faq-item">
-                <summary>Preciso já ter um nicho definido?<span class="sinal"></span></summary>
-                <div class="faq-resposta">Não. Boa parte da sala chega sem nicho, e vários saem com um recorte bem diferente do que imaginavam ao entrar.</div>
-            </details>
-
-            <details class="faq-item">
-                <summary>Isso é uma venda de mentoria disfarçada?<span class="sinal"></span></summary>
-                <div class="faq-resposta">O evento é o evento. Existe uma mentoria e ela é apresentada, mas os dois dias entregam sozinhos. Quem sair sem comprar nada sai com o mapa.</div>
-            </details>
-
-            <details class="faq-item">
-                <summary>Como funciona o desconto para sócios?<span class="sinal"></span></summary>
-                <div class="faq-resposta">Na compra de dois ingressos, o segundo sai com 50% de desconto. Vale para sócios do mesmo escritório.</div>
-            </details>
-
         </div>
     </div>
 </section>
 
-<!-- ═══ 16 · FECHAMENTO ═══ -->
+<!-- ═══ 13 · FECHAMENTO ═══ -->
 <section class="fecho">
     <div class="wrap">
         <p>Você pode fechar essa página e voltar pra mesma rotina amanhã. Abrir o WhatsApp, torcer por indicação, aceitar o caso errado e chamar isso de estratégia.</p>
         <p class="escolha">Ou pode decidir que o caos <span class="destaque">acaba em novembro.</span></p>
-        <a href="#ingressos" class="btn btn-primario">Garantir minha vaga <span class="seta">→</span></a>
-        <span class="btn-nota">Lote 0 aberto · R$ 147 · 06 e 07 de novembro</span>
+        <a href="https://chk.eduzz.com/G92KE35KWE" target="_blank" rel="noopener" class="btn btn-primario">Garantir minha vaga por R$ 147</a>
+        <span class="btn-nota">Lote 0 aberto · vira em <b class="cd" style="color:var(--amarelo-ruptura)">--</b></span>
         <p class="assinatura">O caos não espera. Nem nós.</p>
     </div>
 </section>
@@ -1402,17 +1594,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ═══ RODAPÉ ═══ -->
 <footer class="rodape">
     <div class="wrap">
-        <img src="assets/ADVM_MARCA-09.png" alt="Advocacia de Monopólio" loading="lazy">
+        <img src="/assets/ADVM_MARCA-09.png" alt="Advocacia de Monopólio" loading="lazy" width="3928" height="313">
         <p>2026 © Advocacia de Monopólio. Todos os direitos reservados.</p>
         <span class="selo-evento">Fim do Caos™ 2ª edição</span>
     </div>
 </footer>
 
-<!-- ═══ CTA GRUDADO ═══ -->
+<div class="lightbox" id="lightbox"><img src="" alt="Depoimento ampliado" id="lightbox-img"></div>
+
+<!-- ═══ CTA GRUDADO (com preço e contador, abrindo o checkout) ═══ -->
 <div class="cta-fixo" id="cta-fixo">
     <div class="wrap">
-        <div class="cta-fixo-texto"><b>06 e 07 de novembro</b> · Lote 0 aberto · <b>R$ 147</b></div>
-        <a href="#ingressos" class="btn btn-primario">Garantir minha vaga <span class="seta">→</span></a>
+        <div class="cta-fixo-texto">Lote 0 · <b>R$ 147</b> · vira em <b class="cd">--</b></div>
+        <a href="https://chk.eduzz.com/G92KE35KWE" target="_blank" rel="noopener" class="btn btn-primario">Garantir por R$ 147</a>
     </div>
 </div>
 
@@ -1420,7 +1614,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 (function () {
     'use strict';
 
-    /* Revelação no scroll */
+    /* Revelação no scroll (o bloco de decisão fica de fora por design) */
     var alvos = document.querySelectorAll('.reveal');
     if ('IntersectionObserver' in window) {
         var obs = new IntersectionObserver(function (entradas) {
@@ -1433,7 +1627,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         alvos.forEach(function (a) { a.classList.add('dentro'); });
     }
 
-    /* CTA grudado aparece depois do hero */
+    /* CTA grudado aparece depois do hero e some dentro da seção de ingressos */
     var ctaFixo = document.getElementById('cta-fixo');
     var hero = document.getElementById('hero');
     var ingressos = document.getElementById('ingressos');
@@ -1450,7 +1644,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     /* Lightbox dos prints */
     var lightbox = document.getElementById('lightbox');
     var lightboxImg = document.getElementById('lightbox-img');
-    document.querySelectorAll('.prova-print img').forEach(function (img) {
+    document.querySelectorAll('.numero-print img').forEach(function (img) {
         img.addEventListener('click', function () {
             lightboxImg.src = img.src;
             lightbox.classList.add('aberto');
@@ -1467,9 +1661,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         if (e.key === 'Escape' && lightbox.classList.contains('aberto')) { fecharLightbox(); }
     });
 
-    /* Poster de vídeo só entra quando o card se aproxima da viewport.
-       O atributo poster é sempre baixado na hora, mesmo com preload="none",
-       e são 8 vídeos abaixo da dobra. */
+    /* Poster de vídeo só entra quando o card se aproxima da viewport */
     var videos = document.querySelectorAll('video[data-poster]');
     function aplicarPoster(v) {
         if (v.dataset.poster) { v.poster = v.dataset.poster; delete v.dataset.poster; }
@@ -1485,23 +1677,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         videos.forEach(aplicarPoster);
     }
 
-    /* Contagem regressiva para o evento */
-    var dataEvento = new Date('2026-11-06T09:00:00-03:00');
-    var contagem = document.getElementById('contagem');
+    /* Contagem regressiva ATÉ A VIRADA DO LOTE 0 (correção da análise:
+       a perda passa a ter data; antes contava até o evento).
+       ⚠ PLACEHOLDER: trocar pela data real da virada definida pelo Gabriel. */
+    var DATA_VIRADA = new Date('2026-10-08T23:59:59-03:00');
+    var alvosCd = document.querySelectorAll('.cd');
+    function doisDigitos(n) { return String(n).padStart(2, '0'); }
     function tique() {
-        var restante = dataEvento - new Date();
-        if (restante <= 0) { contagem.style.display = 'none'; return; }
+        var restante = DATA_VIRADA - new Date();
+        if (restante <= 0) {
+            alvosCd.forEach(function (el) {
+                var chip = el.closest('.virada-chip');
+                if (chip) { chip.style.display = 'none'; } else { el.textContent = 'breve'; }
+            });
+            return;
+        }
         var dias = Math.floor(restante / 86400000);
         var horas = Math.floor(restante / 3600000) % 24;
         var min = Math.floor(restante / 60000) % 60;
-        var seg = Math.floor(restante / 1000) % 60;
-        document.getElementById('cd-dias').textContent = dias;
-        document.getElementById('cd-horas').textContent = String(horas).padStart(2, '0');
-        document.getElementById('cd-min').textContent = String(min).padStart(2, '0');
-        document.getElementById('cd-seg').textContent = String(seg).padStart(2, '0');
+        var texto = doisDigitos(dias) + 'd ' + doisDigitos(horas) + 'h ' + doisDigitos(min) + 'm';
+        alvosCd.forEach(function (el) { el.textContent = texto; });
     }
     tique();
-    setInterval(tique, 1000);
+    setInterval(tique, 30000);
 })();
 </script>
 
