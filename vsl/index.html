@@ -348,6 +348,40 @@
         @keyframes correr { to { transform: translateX(-50%); } }
         @media (prefers-reduced-motion: reduce) { .faixa-conteudo { animation: none; } }
 
+        /* ═══ GALERIA DA 1ª EDIÇÃO (mesma da landing principal) ═══ */
+        .galeria { background: var(--fundo); padding: clamp(4rem, 9vw, 7.5rem) 0; }
+        .galeria-grade {
+            display: grid; gap: 0.7rem; margin-top: 2.6rem;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 168px;
+            grid-auto-flow: dense;
+        }
+        .galeria-grade figure {
+            margin: 0; overflow: hidden; border-radius: 8px;
+            border: 1px solid var(--card-borda); background: var(--card);
+        }
+        .galeria-grade img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.5s ease, filter 0.4s ease;
+            filter: saturate(0.85);
+        }
+        .galeria-grade figure:hover img { transform: scale(1.05); filter: saturate(1); }
+        .g-larga { grid-column: span 2; }
+        .g-alta { grid-row: span 2; }
+        @media (max-width: 900px) {
+            .galeria-grade { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 140px; }
+        }
+        @media (max-width: 520px) {
+            .galeria-grade { grid-auto-rows: 116px; }
+            .g-larga { grid-column: span 2; }
+        }
+        .galeria-nota {
+            text-align: center; margin-top: 1.4rem;
+            font-family: var(--mono); font-size: 0.72rem;
+            letter-spacing: 0.1em; text-transform: uppercase; color: var(--texto-suave);
+        }
+        .galeria-nota b { color: var(--amarelo-ruptura); }
+
         /* placeholder de pendência */
         .pendente {
             position: relative;
@@ -691,12 +725,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <span class="destaque">monopolizam</span> suas áreas
         </h1>
 
-        <p class="hero-sub reveal">
-            Aperte o play. Em nove minutos você vai entender <b>como esse ambiente
-            funciona</b>, o que aconteceu com quem já entrou nele e como garantir
-            sua cadeira em novembro.
-        </p>
-
         <!-- PLAYER DA VSL · VTurb (instalado 30/09). O vídeo é VERTICAL (9:16),
              por isso o quadro é estreito. O preload do script está no <head>. -->
         <div class="vsl-quadro reveal">
@@ -770,6 +798,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="centro" style="margin-top:3rem">
             <a href="#ingressos" class="btn btn-primario">Quero esse mapa <span class="seta">→</span></a>
         </div>
+    </div>
+</section>
+
+<!-- ═══ 3b · GALERIA DA 1ª EDIÇÃO (mesma da landing principal) ═══ -->
+<section class="galeria">
+    <div class="wrap">
+        <div class="centro">
+            <span class="eyebrow">Maio de 2026</span>
+            <h2 class="display">A sala que <span class="amarelo">já encheu uma vez</span></h2>
+        </div>
+
+        <div class="galeria-grade">
+            <!-- primeira: a de sala cheia, prova de volume -->
+            <figure class="g-larga g-alta"><img src="/assets/mostrar_evento_cheio.jpg" alt="Sala cheia na 1ª edição do Fim do Caos" loading="lazy"></figure>
+            <figure class="g-alta"><img src="/assets/mostrar_gente.jpg" alt="Participante do Fim do Caos" loading="lazy"></figure>
+            <figure class="g-alta"><img src="/assets/mostrar_gente3.jpg" alt="Advogado acompanhando a palestra" loading="lazy"></figure>
+            <figure class="g-larga"><img src="/assets/mostrar_volume.jpg" alt="Plateia numerosa durante a imersão" loading="lazy"></figure>
+            <figure class="g-larga"><img src="/assets/mostrar_evento.jpg" alt="Palco e telão da Advocacia de Monopólio" loading="lazy"></figure>
+            <figure class="g-alta"><img src="/assets/mostrar_gente2.jpg" alt="Participante do Fim do Caos" loading="lazy"></figure>
+            <figure><img src="/assets/mostrar_gente5.jpg" alt="Advogada acompanhando o conteúdo" loading="lazy"></figure>
+            <figure><img src="/assets/mostrar_marca.jpg" alt="Material da Advocacia de Monopólio" loading="lazy"></figure>
+            <figure class="g-larga"><img src="/assets/mostrar_evento2.jpg" alt="Palestra para a sala cheia" loading="lazy"></figure>
+            <figure class="g-alta"><img src="/assets/mostrar_gente4.jpg" alt="Advogada na plateia do evento" loading="lazy"></figure>
+            <figure class="g-alta"><img src="/assets/mostrar_gente6.jpg" alt="Advogada durante a imersão" loading="lazy"></figure>
+            <figure class="g-larga"><img src="/assets/mostrar_evento_acontecendo.jpg" alt="Bancada de convidados no palco" loading="lazy"></figure>
+            <figure class="g-larga"><img src="/assets/evento-mesa-neon.jpg" alt="Participantes trabalhando durante o evento" loading="lazy"></figure>
+            <figure><img src="/assets/mostrar_gente7.jpg" alt="Advogadas na plateia" loading="lazy"></figure>
+            <figure><img src="/assets/mostrar_gente8.jpg" alt="Advogado concentrado na palestra" loading="lazy"></figure>
+        </div>
+
+        <p class="galeria-nota">1ª edição · 29 e 30 de maio de 2026 · <b>+90 advogados presentes</b></p>
     </div>
 </section>
 
