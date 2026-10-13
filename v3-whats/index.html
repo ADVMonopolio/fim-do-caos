@@ -1,0 +1,1673 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WT73H84R');</script>
+    <!-- End Google Tag Manager -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIM DO CAOS™ 2ª EDIÇÃO · Advocacia de Monopólio</title>
+    <meta name="description" content="Imersão presencial para advogados que já têm clientes. 06 e 07 de novembro, das 08h30 às 18h00, em Alphaville (SP). Vagas limitadas.">
+    <meta property="og:title" content="Pare de depender de indicação para fechar contratos · Fim do Caos™ 2ª edição">
+    <meta property="og:description" content="2 dias com os 5 sócios da ADVM: 06 e 07/11, Alphaville (SP). Vagas limitadas.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.fimdocaos.com.br/">
+    <meta property="og:image" content="https://www.fimdocaos.com.br/assets/mostrar_evento_cheio.jpg">
+    <meta property="og:image:width" content="1600">
+    <meta property="og:image:height" content="1067">
+    <link rel="icon" type="image/png" href="/assets/ADVM_MARCA-18.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ═══════════════════════════════════════
+           ADVOCACIA DE MONOPÓLIO — FIM DO CAOS™ 2.0
+           Landing de evento · variante DOR
+           Arquitetura: ref 03 · Paleta: ADVM
+           ═══════════════════════════════════════ */
+
+        :root {
+            --roxo-origem: #451450;
+            --roxo-expansao: #874ed1;
+            --amarelo-ruptura: #d9e80f;
+            --cinza-estrutura: #bcbcbc;
+            --preto: #000000;
+            --branco: #ffffff;
+            --preto-profundo: #0a0a0a;
+
+            /* derivados */
+            --fundo: #120518;
+            --fundo-alt: #1a0821;
+            --card: #1e0a26;
+            --card-borda: rgba(135, 78, 209, 0.22);
+            --texto-suave: #a99bb0;
+
+            --display: 'Archivo', 'DM Sans', sans-serif;
+            --corpo: 'DM Sans', sans-serif;
+            --mono: 'Space Mono', monospace;
+
+            --topo: 62px;
+            --max: 1180px;
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: calc(var(--topo) + 16px);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: var(--corpo);
+            background: var(--fundo);
+            color: var(--branco);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        img { max-width: 100%; height: auto; display: block; }
+
+        .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 1.5rem; }
+
+        /* ─── tipografia ─── */
+        .display {
+            font-family: var(--display);
+            font-weight: 800;
+            line-height: 1.04;
+            letter-spacing: -0.025em;
+            text-transform: uppercase;
+        }
+
+        h2.display { font-size: clamp(1.65rem, 4.2vw, 3rem); }
+        h3.display { font-size: clamp(1.15rem, 2.2vw, 1.6rem); }
+
+        .amarelo { color: var(--amarelo-ruptura); }
+        .lilas { color: var(--roxo-expansao); }
+        .suave { color: var(--texto-suave); }
+
+        .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--amarelo-ruptura);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+        }
+        .eyebrow::before {
+            content: '';
+            width: 7px; height: 7px;
+            border-radius: 50%;
+            background: var(--amarelo-ruptura);
+            box-shadow: 0 0 10px var(--amarelo-ruptura);
+        }
+
+        .lead { font-size: clamp(0.98rem, 1.5vw, 1.08rem); color: var(--texto-suave); }
+        .lead strong { color: var(--branco); font-weight: 700; }
+        .lead em { font-style: normal; color: var(--amarelo-ruptura); }
+
+        section { position: relative; }
+        .bloco { padding: clamp(4rem, 9vw, 7.5rem) 0; }
+
+        .centro { text-align: center; }
+        .centro .eyebrow { margin-bottom: 1.1rem; }
+        .centro h2 { margin-bottom: 1rem; }
+        .centro .lead { max-width: 620px; margin: 0 auto; }
+
+        /* ─── textura ─── */
+        .grao {
+            position: fixed; inset: 0;
+            pointer-events: none; z-index: 9999;
+            opacity: 0.035;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        }
+
+        /* ═══ BOTÕES ═══ */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            font-family: var(--display);
+            font-weight: 800;
+            font-size: clamp(0.82rem, 1.4vw, 0.95rem);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            text-decoration: none;
+            white-space: nowrap;
+            padding: 1.15rem 2.4rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            position: relative;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+        }
+        .btn-primario {
+            background: var(--amarelo-ruptura);
+            color: var(--preto);
+            box-shadow: 0 0 0 rgba(217, 232, 15, 0), 0 12px 34px rgba(217, 232, 15, 0.18);
+        }
+        .btn-primario:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 34px rgba(217, 232, 15, 0.4), 0 16px 40px rgba(217, 232, 15, 0.22);
+        }
+        .btn-vazado {
+            background: transparent;
+            color: var(--branco);
+            border: 1px solid rgba(135, 78, 209, 0.55);
+        }
+        .btn-vazado:hover { border-color: var(--amarelo-ruptura); color: var(--amarelo-ruptura); }
+        .btn .seta { transition: transform 0.25s ease; }
+        .btn:hover .seta { transform: translateX(5px); }
+
+        .btn-nota {
+            display: block;
+            font-family: var(--mono);
+            font-size: 0.72rem;
+            letter-spacing: 0.06em;
+            color: var(--texto-suave);
+            margin-top: 0.95rem;
+        }
+
+        /* ═══ 0 · BARRA FIXA ═══ */
+        .topo {
+            position: fixed; top: 0; left: 0; right: 0;
+            height: var(--topo);
+            z-index: 900;
+            display: flex; align-items: center;
+            background: rgba(10, 3, 14, 0.82);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(135, 78, 209, 0.18);
+        }
+        .topo .wrap { display: flex; align-items: center; gap: 1.5rem; }
+        .topo-marca { display: flex; align-items: center; gap: 0.85rem; flex-shrink: 0; }
+        .topo-marca img { height: 26px; width: auto; filter: brightness(0) invert(1); opacity: 0.9; }
+        .topo-marca span {
+            font-family: var(--display); font-weight: 800; font-size: 0.82rem;
+            letter-spacing: 0.04em; text-transform: uppercase; white-space: nowrap;
+        }
+        .topo-marca span i { font-style: normal; color: var(--amarelo-ruptura); }
+        .topo-aviso {
+            flex: 1; text-align: center;
+            font-family: var(--mono); font-size: 0.72rem;
+            letter-spacing: 0.06em; color: var(--cinza-estrutura);
+        }
+        .topo-aviso b { color: var(--amarelo-ruptura); }
+        .topo .btn { padding: 0.62rem 1.3rem; font-size: 0.72rem; flex-shrink: 0; }
+
+        @media (max-width: 900px) { .topo-aviso { display: none; } .topo .wrap { justify-content: space-between; } }
+        /* no celular o nome do evento sai do header pra caber o botão inteiro */
+        @media (max-width: 680px) {
+            .topo .wrap { padding: 0 1rem; gap: 0.75rem; }
+            .topo-marca span { display: none; }
+            .topo .btn { padding: 0.6rem 1.05rem; font-size: 0.68rem; }
+        }
+
+        /* ═══ 1 · HERO ═══ */
+        .hero {
+            position: relative;
+            padding: calc(var(--topo) + 3rem) 0 4rem;
+            min-height: 92vh;
+            display: flex; align-items: center;
+            background: radial-gradient(120% 90% at 50% 0%, #3a1147 0%, #1d0826 45%, var(--fundo) 100%);
+            overflow: hidden;
+        }
+        .hero-fundo {
+            position: absolute; inset: 0;
+            background: url('/assets/evento-sala-wide.jpg') center 35% / cover no-repeat;
+            opacity: 0.22;
+            filter: saturate(0.4) contrast(1.1);
+            pointer-events: none;
+        }
+        .hero::after {
+            content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 220px;
+            background: linear-gradient(to bottom, transparent, var(--fundo));
+            pointer-events: none;
+        }
+        .hero-grafismo {
+            position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: min(620px, 90vw);
+            opacity: 0.07;
+            pointer-events: none;
+            animation: girar 90s linear infinite;
+        }
+        @keyframes girar { to { transform: translate(-50%, -50%) rotate(360deg); } }
+        @media (prefers-reduced-motion: reduce) { .hero-grafismo { animation: none; } }
+        .hero .wrap { position: relative; z-index: 2; text-align: center; }
+
+        /* Bloco de data no topo do hero + head em caixa alta + complemento. */
+        .hero-tipo {
+            font-family: var(--mono); font-size: clamp(0.68rem, 1.1vw, 0.8rem);
+            font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase;
+            color: var(--branco); opacity: 0.9;
+        }
+        .hero-data {
+            display: flex; align-items: center; justify-content: center;
+            gap: clamp(0.8rem, 2.5vw, 1.6rem);
+            margin: 0.9rem auto 0.55rem;
+            font-family: var(--display); font-weight: 900;
+            font-size: clamp(1.55rem, 4.6vw, 3.1rem);
+            line-height: 1; letter-spacing: -0.02em; text-transform: uppercase;
+            color: var(--amarelo-ruptura);
+            text-shadow: 0 0 34px rgba(217, 232, 15, 0.35);
+            white-space: nowrap;
+        }
+        .hero-data::before, .hero-data::after {
+            content: ''; height: 2px; flex: 0 1 110px;
+            background: linear-gradient(90deg, transparent, var(--amarelo-ruptura));
+        }
+        .hero-data::after { background: linear-gradient(90deg, var(--amarelo-ruptura), transparent); }
+        .hero-data-local {
+            font-family: var(--mono); font-size: clamp(0.7rem, 1.2vw, 0.82rem);
+            font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+            color: var(--cinza-estrutura);
+            margin-bottom: 1.9rem;
+        }
+        .hero-data-local b { color: var(--branco); }
+
+        .hero h1 {
+            font-family: var(--display); font-weight: 900;
+            font-size: clamp(1.65rem, 4.1vw, 3.1rem);
+            line-height: 1.06; letter-spacing: -0.03em; text-transform: uppercase;
+            max-width: 26ch; margin: 0 auto;
+            text-wrap: balance;
+        }
+        .hero h1 .destaque { color: var(--amarelo-ruptura); }
+
+        /* Complemento da head: caixa normal, data em amarelo */
+        .hero-compl {
+            font-family: var(--corpo);
+            font-size: clamp(1.05rem, 2.1vw, 1.4rem);
+            font-weight: 500; color: var(--branco);
+            margin: 1.2rem auto 0;
+            max-width: 52ch;
+        }
+        .hero-compl b { color: var(--amarelo-ruptura); font-weight: 700; }
+
+        /* Aviso de lote 0 no hero: destaque grande, sem preço */
+        .hero-lote {
+            display: inline-flex; align-items: center; gap: 0.75rem;
+            margin-top: 1.3rem;
+            background: rgba(217, 232, 15, 0.12);
+            border: 2px solid var(--amarelo-ruptura);
+            border-radius: 10px;
+            padding: 1rem 1.7rem;
+            font-family: var(--mono); font-size: clamp(0.78rem, 1.4vw, 0.95rem);
+            font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+            color: var(--branco); text-decoration: none;
+            box-shadow: 0 0 28px rgba(217, 232, 15, 0.14);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .hero-lote:hover { transform: translateY(-2px); box-shadow: 0 0 44px rgba(217, 232, 15, 0.32); }
+        .hero-lote b { color: var(--amarelo-ruptura); white-space: nowrap; }
+        .hero-lote::before {
+            content: ''; width: 9px; height: 9px; border-radius: 50%;
+            background: var(--amarelo-ruptura);
+            box-shadow: 0 0 10px var(--amarelo-ruptura);
+            animation: pulsar 1.8s ease-in-out infinite;
+            flex-shrink: 0;
+        }
+        @keyframes pulsar { 50% { opacity: 0.35; } }
+        @media (prefers-reduced-motion: reduce) { .hero-lote::before { animation: none; } }
+        @media (max-width: 480px) { .hero-lote { font-size: 0.7rem; padding: 0.75rem 1rem; gap: 0.55rem; } }
+
+        .hero-sub {
+            font-size: clamp(0.98rem, 1.8vw, 1.15rem);
+            color: var(--cinza-estrutura);
+            max-width: 52ch; margin: 1.2rem auto 0;
+            text-wrap: pretty;
+        }
+        .hero-sub b { color: var(--branco); font-weight: 700; }
+
+        .hero-acao { margin-top: 1.9rem; }
+        /* ═══ 2 · FAIXA CORRIDA ═══ */
+        .faixas { position: relative; height: 150px; overflow: hidden; background: var(--fundo); z-index: 3; margin-top: -60px; }
+        .faixa {
+            position: absolute; left: -12%; width: 124%;
+            display: flex; align-items: center;
+            padding: 0.7rem 0;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .faixa-1 { top: 22px; transform: rotate(-2.6deg); background: var(--amarelo-ruptura); }
+        .faixa-2 { top: 80px; transform: rotate(2.2deg); background: var(--roxo-expansao); }
+        .faixa-conteudo {
+            display: flex; flex-shrink: 0; align-items: center;
+            font-family: var(--display); font-weight: 900;
+            font-size: 0.95rem; letter-spacing: 0.06em; text-transform: uppercase;
+            animation: correr 30s linear infinite;
+        }
+        .faixa-2 .faixa-conteudo { animation-direction: reverse; }
+        .faixa-conteudo span { padding: 0 1.1rem; }
+        .faixa-1 .faixa-conteudo { color: var(--preto); }
+        .faixa-2 .faixa-conteudo { color: var(--branco); }
+        @keyframes correr { to { transform: translateX(-50%); } }
+        @media (prefers-reduced-motion: reduce) { .faixa-conteudo { animation: none; } }
+
+        /* placeholder de pendência */
+        .pendente {
+            position: relative;
+            border-style: dashed !important;
+            border-color: rgba(217, 232, 15, 0.4) !important;
+        }
+        .pendente::after {
+            content: 'A CONFIRMAR';
+            position: absolute; top: 8px; right: 8px;
+            font-family: var(--mono); font-size: 0.55rem; font-weight: 700;
+            letter-spacing: 0.12em;
+            color: var(--preto); background: var(--amarelo-ruptura);
+            padding: 2px 6px; border-radius: 3px;
+        }
+
+        /* (seção do dilema removida em 09/09; .split segue em uso no palco e no imposto) */
+        .split {
+            display: grid; gap: clamp(2rem, 5vw, 4rem);
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+        }
+        @media (max-width: 860px) { .split { grid-template-columns: 1fr; } }
+
+        .split-figura { position: relative; border-radius: 12px; overflow: hidden; }
+        .split-figura img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4/5; filter: saturate(0.6) contrast(1.05); }
+        .split-figura::after {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(200deg, rgba(69,20,80,0.45), rgba(18,5,24,0.75));
+        }
+        .split-texto h2 { margin: 1.1rem 0 1.4rem; }
+        .split-texto p { color: var(--texto-suave); margin-bottom: 1rem; }
+        .split-texto p b { color: var(--branco); font-weight: 700; }
+        .split-texto .veredito {
+            font-family: var(--display); font-weight: 800;
+            font-size: clamp(1.05rem, 2vw, 1.35rem);
+            text-transform: uppercase; letter-spacing: -0.01em;
+            color: var(--amarelo-ruptura);
+            line-height: 1.25; margin: 1.7rem 0 2rem;
+        }
+
+        /* ═══ 5 · VÍDEO ═══ */
+        .video { background: var(--fundo); overflow: hidden; }
+        .video-halo {
+            position: absolute; top: 50%; left: 50%;
+            width: 720px; height: 720px; transform: translate(-50%,-50%);
+            background: radial-gradient(circle, rgba(135,78,209,0.18), transparent 65%);
+            pointer-events: none;
+        }
+        /* Os dois sameday, lado a lado. preload="none": nada baixa até o clique. */
+        .sameday {
+            display: grid; gap: 1.2rem; margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        }
+        .sameday-item {
+            background: var(--card); border: 1px solid var(--card-borda);
+            border-radius: 12px; overflow: hidden;
+        }
+        .sameday-item video {
+            width: 100%; aspect-ratio: 16/9; display: block;
+            background: #0d0412; object-fit: cover;
+        }
+        .sameday-rot {
+            display: flex; align-items: baseline; justify-content: space-between;
+            gap: 0.75rem; padding: 0.9rem 1.2rem 1.1rem;
+        }
+        .sameday-rot strong {
+            font-family: var(--display); font-weight: 900; text-transform: uppercase;
+            font-size: 0.95rem; letter-spacing: 0.02em;
+        }
+        .sameday-rot span {
+            font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.1em;
+            color: var(--texto-suave); text-transform: uppercase;
+        }
+
+        /* ═══ GALERIA DO EVENTO ═══ */
+        .galeria { background: var(--fundo); padding-bottom: clamp(4rem, 9vw, 7.5rem); }
+        .galeria-grade {
+            display: grid; gap: 0.7rem; margin-top: 2.6rem;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 168px;
+            grid-auto-flow: dense;
+        }
+        .galeria-grade figure {
+            margin: 0; overflow: hidden; border-radius: 8px;
+            border: 1px solid var(--card-borda); background: var(--card);
+        }
+        .galeria-grade img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.5s ease, filter 0.4s ease;
+            filter: saturate(0.85);
+        }
+        .galeria-grade figure:hover img { transform: scale(1.05); filter: saturate(1); }
+        .g-larga { grid-column: span 2; }
+        .g-alta { grid-row: span 2; }
+        @media (max-width: 900px) {
+            .galeria-grade { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 140px; }
+        }
+        @media (max-width: 520px) {
+            .galeria-grade { grid-auto-rows: 116px; }
+            .g-larga { grid-column: span 2; }
+        }
+        .galeria-nota {
+            text-align: center; margin-top: 1.4rem;
+            font-family: var(--mono); font-size: 0.72rem;
+            letter-spacing: 0.1em; text-transform: uppercase; color: var(--texto-suave);
+        }
+        .galeria-nota b { color: var(--amarelo-ruptura); }
+
+        /* ═══ 6 · FRASE DE TRANSIÇÃO ═══ */
+        .frase-caos { background: var(--fundo-alt); padding: clamp(4rem, 8vw, 6.5rem) 0; }
+        .frase-caos-txt {
+            font-size: clamp(1.7rem, 4.4vw, 3.2rem);
+            max-width: 21ch; margin: 0 auto;
+            text-wrap: balance;
+        }
+
+        /* ═══ 7 · POR QUE AGORA (bloco claro) ═══ */
+        .agora {
+            background: var(--amarelo-ruptura);
+            color: var(--preto);
+            clip-path: polygon(0 0, 100% 2.2vw, 100% 100%, 0 calc(100% - 2.2vw));
+            padding: clamp(6rem, 11vw, 9rem) 0;
+        }
+        .agora .eyebrow { color: #6a1f7d; }
+        .agora .eyebrow::before { background: #6a1f7d; box-shadow: none; }
+        .agora h2 { color: var(--preto); }
+        .agora h2 .destaque { color: var(--roxo-origem); }
+        .agora p { color: rgba(0,0,0,0.72); }
+        .agora p b { color: var(--preto); }
+        .agora-grade { display: grid; grid-template-columns: 1fr 1.15fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+        @media (max-width: 860px) { .agora-grade { grid-template-columns: 1fr; } }
+        .agora-lista {
+            background: var(--roxo-origem); color: var(--branco);
+            border-radius: 10px; padding: 1.4rem 1.6rem;
+            margin-top: 1.6rem; list-style: none;
+            font-family: var(--mono); font-size: 0.88rem; line-height: 2;
+        }
+        .agora-lista li::before { content: '→ '; color: var(--amarelo-ruptura); }
+        .agora-texto p { margin-bottom: 1.05rem; font-size: 1.02rem; }
+        .agora-remate {
+            font-family: var(--display); font-weight: 800; text-transform: uppercase;
+            font-size: clamp(1rem, 1.9vw, 1.3rem); line-height: 1.3;
+            color: var(--roxo-origem) !important;
+            border-top: 2px solid rgba(0,0,0,0.15); padding-top: 1.2rem; margin-top: 1.4rem;
+        }
+
+        /* ═══ 8 · PALCO ═══ */
+        .palco { background: var(--fundo); }
+        .palco-figura {
+            position: relative; margin: 0;
+            border-radius: 12px; overflow: hidden;
+            border: 1px solid var(--card-borda);
+        }
+        .palco-figura img { width: 100%; display: block; }
+        .palco-figura figcaption {
+            position: absolute; left: 0; right: 0; bottom: 0;
+            padding: 2.2rem 1.3rem 1rem;
+            background: linear-gradient(to top, rgba(10,3,14,0.88), transparent);
+            font-family: var(--mono); font-size: 0.68rem; font-weight: 700;
+            letter-spacing: 0.12em; text-transform: uppercase;
+            color: var(--amarelo-ruptura); text-align: center;
+        }
+
+        /* ═══ 9 · O QUE VOCÊ LEVA ═══ */
+        .leva { background: var(--fundo-alt); }
+        .leva-lista { display: grid; gap: 1.3rem; margin-top: 3.2rem; }
+        .leva-card {
+            position: relative;
+            background: var(--card); border: 1px solid var(--card-borda);
+            border-radius: 14px; overflow: hidden;
+            display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+            gap: clamp(1.2rem, 3vw, 2.6rem);
+            padding: 1.3rem;
+            align-items: center;
+        }
+        .leva-card::before {
+            content: ''; position: absolute; top: 0; left: 2rem;
+            width: 96px; height: 5px; border-radius: 0 0 6px 6px;
+            background: var(--amarelo-ruptura);
+            box-shadow: 0 0 18px rgba(217,232,15,0.45);
+        }
+        .leva-card:nth-child(even) { grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); }
+        .leva-card:nth-child(even) .leva-figura { order: 2; }
+        @media (max-width: 800px) {
+            .leva-card, .leva-card:nth-child(even) { grid-template-columns: 1fr; }
+            .leva-card:nth-child(even) .leva-figura { order: 0; }
+        }
+        .leva-figura { border-radius: 10px; overflow: hidden; position: relative; }
+        .leva-figura img { width: 100%; aspect-ratio: 4/3; object-fit: cover; filter: saturate(0.55) contrast(1.08) brightness(0.85); }
+        .leva-figura::after {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(160deg, rgba(135,78,209,0.28), rgba(69,20,80,0.5));
+            mix-blend-mode: multiply;
+        }
+        .leva-corpo { padding: 0.6rem 0.8rem 0.8rem 0; }
+        .leva-num {
+            display: inline-grid; place-items: center;
+            width: 34px; height: 34px; border-radius: 6px;
+            background: var(--amarelo-ruptura); color: var(--preto);
+            font-family: var(--display); font-weight: 900; font-size: 1rem;
+            margin-bottom: 0.9rem;
+        }
+        .leva-corpo h3 { margin-bottom: 0.75rem; }
+        .leva-corpo h3 .destaque { color: var(--amarelo-ruptura); }
+        .leva-corpo p { color: var(--texto-suave); font-size: 0.94rem; }
+        .leva-corpo p b { color: var(--branco); font-weight: 700; }
+
+        /* ═══ 10 · PROVA SOCIAL ═══ */
+        .prova { background: var(--fundo); overflow: hidden; }
+        .prova-pista {
+            display: flex; gap: 1rem; margin-top: 3rem;
+            overflow-x: auto; scroll-snap-type: x mandatory;
+            padding-bottom: 1.2rem;
+            scrollbar-width: thin; scrollbar-color: var(--roxo-expansao) transparent;
+        }
+        .prova-pista::-webkit-scrollbar { height: 6px; }
+        .prova-pista::-webkit-scrollbar-thumb { background: var(--roxo-expansao); border-radius: 10px; }
+        /* Altura fixa: reserva espaço antes do lazy-load e mantém os cards uniformes
+           apesar dos prints terem proporções diferentes. O print inteiro abre no lightbox. */
+        .prova-print {
+            flex: 0 0 auto; width: min(280px, 72vw); height: 420px;
+            scroll-snap-align: center;
+            border-radius: 10px; overflow: hidden;
+            border: 1px solid var(--card-borda);
+            cursor: zoom-in;
+            transition: transform 0.25s ease, border-color 0.25s ease;
+            background: var(--card);
+        }
+        .prova-print:hover { transform: translateY(-4px); border-color: rgba(217,232,15,0.5); }
+        .prova-print img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+
+        /* Depoimentos em vídeo gravados na 1ª edição */
+        .prova-videos {
+            display: grid; gap: 1.1rem; margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+        .prova-video {
+            background: var(--card); border: 1px solid var(--card-borda);
+            border-radius: 12px; overflow: hidden;
+            display: flex; flex-direction: column;
+            transition: border-color 0.3s ease, transform 0.3s ease;
+        }
+        .prova-video:hover { border-color: rgba(217,232,15,0.45); transform: translateY(-4px); }
+        .prova-video video {
+            width: 100%; aspect-ratio: 16/9; display: block;
+            background: #0d0412; object-fit: cover;
+        }
+        .prova-video figcaption { padding: 1.1rem 1.3rem 1.3rem; display: flex; flex-direction: column; flex: 1; }
+        .prova-fala {
+            font-size: 0.95rem; line-height: 1.55; color: var(--branco);
+            font-weight: 500; flex: 1;
+        }
+        .prova-fala::before { content: '“'; color: var(--amarelo-ruptura); font-size: 1.3em; line-height: 0; }
+        .prova-fala::after { content: '”'; color: var(--amarelo-ruptura); font-size: 1.3em; line-height: 0; }
+        .prova-quem {
+            margin-top: 0.95rem; padding-top: 0.85rem;
+            border-top: 1px solid var(--card-borda);
+        }
+        .prova-quem strong {
+            display: block; font-family: var(--display); font-weight: 800;
+            text-transform: uppercase; font-size: 0.88rem; letter-spacing: 0.01em;
+        }
+        .prova-quem span {
+            font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.09em;
+            text-transform: uppercase; color: var(--amarelo-ruptura);
+        }
+
+        .lightbox {
+            position: fixed; inset: 0; z-index: 9998;
+            background: rgba(5, 1, 8, 0.93);
+            display: none; align-items: center; justify-content: center;
+            padding: 2rem; cursor: zoom-out;
+        }
+        .lightbox.aberto { display: flex; }
+        .lightbox img { max-width: min(560px, 92vw); max-height: 88vh; width: auto; border-radius: 10px; }
+
+        /* ═══ 11 · FAIXA DOS MENTORADOS ═══ */
+        .mentorados {
+            position: relative;
+            background:
+                linear-gradient(to bottom, rgba(18,5,24,0.5), rgba(18,5,24,0.12) 32%, rgba(18,5,24,0.16) 52%, rgba(18,5,24,0.9) 78%, rgba(18,5,24,0.98)),
+                url('/assets/todos_mentorados_advm.jpg') center 18% / cover no-repeat;
+            min-height: 92vh;
+            display: flex; align-items: flex-end;
+            padding: clamp(14rem, 42vh, 24rem) 0 clamp(3rem, 6vw, 4.5rem);
+        }
+        .mentorados .wrap { text-align: center; }
+        .mentorados h2 { max-width: 24ch; margin: 1rem auto; }
+        .mentorados .lead { max-width: 560px; margin: 0 auto; }
+        .mentorados .lead b { color: var(--branco); }
+
+        /* ═══ 12 · IMPOSTO DO CAOS ═══ */
+        .imposto { background: var(--fundo); }
+        .imposto-lista { list-style: none; display: grid; gap: 0.65rem; }
+        .imposto-lista li {
+            display: flex; gap: 0.7rem; align-items: flex-start;
+            font-size: 0.95rem; color: var(--texto-suave);
+        }
+        .imposto-lista li b { color: var(--branco); font-weight: 700; }
+        .imposto-lista .x { color: var(--roxo-expansao); font-weight: 700; flex-shrink: 0; }
+        /* Itens em destaque: o custo do caos é o corpo da seção */
+        .imposto-grande { gap: 1.15rem; }
+        .imposto-grande li {
+            font-family: var(--display); font-weight: 800;
+            font-size: clamp(1.02rem, 1.9vw, 1.4rem);
+            line-height: 1.3; letter-spacing: -0.01em; text-transform: uppercase;
+            color: var(--branco);
+            align-items: baseline;
+        }
+        .imposto-grande li b { color: var(--amarelo-ruptura); font-weight: 800; }
+        .imposto-grande .x {
+            color: var(--amarelo-ruptura); font-size: 1.1em;
+            text-shadow: 0 0 12px rgba(217,232,15,0.45);
+        }
+        /* ═══ 13 · INGRESSOS ═══ */
+        .ingressos { background: var(--fundo-alt); }
+        .lotes {
+            display: grid; gap: 1rem; margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+        }
+        .lote {
+            position: relative;
+            background: var(--card); border: 1px solid var(--card-borda);
+            border-radius: 12px; padding: 1.8rem 1.5rem 1.6rem;
+            display: flex; flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+        .lote-ativo {
+            border-color: var(--amarelo-ruptura);
+            box-shadow: 0 0 0 1px var(--amarelo-ruptura), 0 20px 50px rgba(217,232,15,0.12);
+            transform: translateY(-6px) scale(1.03);
+            background: linear-gradient(170deg, rgba(217,232,15,0.07), var(--card) 45%);
+            animation: brilho-lote 2.6s ease-in-out infinite;
+        }
+        .lote-ativo:hover { transform: translateY(-9px) scale(1.03); }
+        @keyframes brilho-lote {
+            50% { box-shadow: 0 0 0 1px var(--amarelo-ruptura), 0 0 42px rgba(217,232,15,0.3), 0 20px 50px rgba(217,232,15,0.14); }
+        }
+        @media (prefers-reduced-motion: reduce) { .lote-ativo { animation: none; } }
+        .lote-ativo .lote-vagas { color: var(--amarelo-ruptura); }
+        .lote-fechado { opacity: 0.42; }
+        .lote-selo {
+            position: absolute; top: -11px; left: 50%; transform: translateX(-50%);
+            font-family: var(--mono); font-size: 0.62rem; font-weight: 700;
+            letter-spacing: 0.14em; text-transform: uppercase;
+            background: var(--amarelo-ruptura); color: var(--preto);
+            padding: 0.25rem 0.9rem; border-radius: 100px; white-space: nowrap;
+        }
+        .lote-nome {
+            font-family: var(--display); font-weight: 900; text-transform: uppercase;
+            font-size: 1.05rem; letter-spacing: 0.02em;
+        }
+        .lote-preco {
+            font-family: var(--display); font-weight: 900;
+            font-size: clamp(2.1rem, 4.5vw, 2.9rem); line-height: 1;
+            letter-spacing: -0.04em; margin: 0.9rem 0 0.2rem;
+        }
+        .lote-ativo .lote-preco { color: var(--amarelo-ruptura); }
+        .lote-preco .cifrao { font-size: 0.45em; vertical-align: 0.6em; margin-right: 0.15em; }
+        .lote-vagas {
+            font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.06em;
+            color: var(--texto-suave); text-transform: uppercase;
+        }
+        .lote-virada {
+            margin-top: 1.1rem; padding-top: 1.1rem;
+            border-top: 1px solid var(--card-borda);
+            font-size: 0.82rem; color: var(--texto-suave); line-height: 1.5;
+            flex: 1;
+        }
+        .lote .btn { width: 100%; margin-top: 1.3rem; padding: 0.85rem 1rem; font-size: 0.75rem; }
+        .lote-fechado .btn { pointer-events: none; }
+
+        .socios {
+            margin-top: 1.6rem; display: flex; flex-wrap: wrap; gap: 1rem;
+            align-items: center; justify-content: space-between;
+            background: linear-gradient(100deg, rgba(135,78,209,0.22), rgba(217,232,15,0.08));
+            border: 1px solid rgba(135,78,209,0.4);
+            border-radius: 10px; padding: 1.2rem 1.5rem;
+        }
+        .socios-texto { font-size: 0.95rem; color: var(--cinza-estrutura); }
+        .socios-texto b { color: var(--amarelo-ruptura); font-weight: 700; }
+        .socios-etiqueta {
+            font-family: var(--mono); font-size: 0.66rem; font-weight: 700;
+            letter-spacing: 0.12em; text-transform: uppercase; color: var(--amarelo-ruptura);
+            display: block; margin-bottom: 0.25rem;
+        }
+
+        .contagem {
+            display: flex; justify-content: center; gap: 1.5rem;
+            margin-top: 3rem; flex-wrap: wrap;
+        }
+        .contagem-item { text-align: center; min-width: 74px; }
+        .contagem-num {
+            font-family: var(--display); font-weight: 900;
+            font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1;
+            color: var(--amarelo-ruptura); letter-spacing: -0.03em;
+        }
+        .contagem-rot {
+            font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.14em;
+            text-transform: uppercase; color: var(--texto-suave); margin-top: 0.35rem;
+        }
+
+        .ingressos-acao { text-align: center; margin-top: 2.8rem; }
+
+        /* ═══ 14 · COMO CHEGAR ═══ */
+        .local { background: var(--fundo); }
+        .local-titulo {
+            font-family: var(--display); font-weight: 900; text-transform: uppercase;
+            font-size: clamp(2.2rem, 7vw, 4.4rem); line-height: 0.95;
+            letter-spacing: -0.04em; text-align: center; margin: 1rem 0 2.6rem;
+        }
+        .local-titulo .destaque { color: var(--amarelo-ruptura); }
+        .local-grade {
+            display: grid; gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+        }
+        .local-card {
+            background: var(--card); border: 1px solid var(--card-borda);
+            border-radius: 10px; padding: 1.4rem 1.5rem;
+        }
+        .local-card h4 {
+            font-family: var(--mono); font-size: 0.7rem; font-weight: 700;
+            letter-spacing: 0.14em; text-transform: uppercase;
+            color: var(--amarelo-ruptura); margin-bottom: 0.7rem;
+        }
+        .local-card p, .local-card li { font-size: 0.9rem; color: var(--texto-suave); line-height: 1.65; }
+        .local-card b { color: var(--branco); font-weight: 700; }
+        .local-card ul { list-style: none; }
+        .local-card li::before { content: '· '; color: var(--roxo-expansao); }
+        .mapa {
+            margin-top: 1rem; border-radius: 12px; overflow: hidden;
+            border: 1px solid var(--card-borda); line-height: 0;
+        }
+        .mapa iframe { width: 100%; height: 320px; border: 0; filter: grayscale(0.35) contrast(1.05); }
+
+        /* ═══ 15 · FAQ ═══ */
+        .faq { background: var(--fundo-alt); }
+        .faq-lista { max-width: 780px; margin: 3rem auto 0; display: grid; gap: 0.75rem; }
+        .faq-item {
+            background: var(--card); border: 1px solid var(--card-borda);
+            border-radius: 8px; overflow: hidden;
+        }
+        .faq-item[open] { border-color: rgba(217,232,15,0.35); }
+        .faq-item summary {
+            list-style: none; cursor: pointer;
+            padding: 1.1rem 1.4rem;
+            display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+            font-weight: 700; font-size: 0.98rem;
+            transition: color 0.2s ease;
+        }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary:hover { color: var(--amarelo-ruptura); }
+        .faq-item[open] summary { color: var(--amarelo-ruptura); }
+        .faq-item summary .sinal {
+            font-family: var(--mono); font-size: 1.2rem; line-height: 1;
+            color: var(--amarelo-ruptura); flex-shrink: 0;
+        }
+        .faq-item[open] summary .sinal::before { content: '−'; }
+        .faq-item:not([open]) summary .sinal::before { content: '+'; }
+        .faq-resposta { padding: 0 1.4rem 1.3rem; font-size: 0.92rem; color: var(--texto-suave); }
+        /* no FAQ o selo colidiria com o "+": a pendência é marcada só pela borda
+           tracejada, e a própria resposta já diz "A confirmar". */
+        .faq-item.pendente::after { content: none; }
+        .faq-item.pendente { border-left: 3px solid var(--amarelo-ruptura); }
+
+        /* ═══ 16 · FECHAMENTO ═══ */
+        .fecho {
+            background:
+                linear-gradient(180deg, rgba(18,5,24,0.86), rgba(18,5,24,0.96)),
+                url('/assets/evento-turma.jpg') center 30% / cover no-repeat;
+            text-align: center;
+            padding: clamp(5rem, 11vw, 8.5rem) 0;
+        }
+        .fecho p { color: var(--cinza-estrutura); max-width: 52ch; margin: 0 auto 1.1rem; font-size: 1.02rem; }
+        .fecho .escolha {
+            font-family: var(--display); font-weight: 900; text-transform: uppercase;
+            font-size: clamp(1.4rem, 3.6vw, 2.4rem); line-height: 1.1; letter-spacing: -0.03em;
+            color: var(--branco); margin: 2rem auto 2.4rem; max-width: 18ch;
+        }
+        .fecho .escolha .destaque { color: var(--amarelo-ruptura); }
+        .fecho .assinatura {
+            font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.14em;
+            text-transform: uppercase; color: var(--texto-suave); margin-top: 2.4rem;
+        }
+
+        /* ═══ RODAPÉ ═══ */
+        .rodape {
+            background: var(--preto-profundo);
+            border-top: 1px solid rgba(135,78,209,0.16);
+            padding: 2.5rem 0 6rem;
+        }
+        .rodape .wrap { display: flex; flex-wrap: wrap; gap: 1.2rem; align-items: center; justify-content: space-between; }
+        .rodape img { width: auto; max-width: 100%; height: auto; max-height: 30px; filter: brightness(0) invert(1); opacity: 0.65; }
+        .rodape p { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.06em; color: #6b5f72; }
+        .rodape .selo-evento {
+            font-family: var(--display); font-weight: 900; text-transform: uppercase;
+            font-size: 0.9rem; letter-spacing: 0.03em; color: rgba(217,232,15,0.75);
+        }
+
+        /* ═══ CTA GRUDADO ═══ */
+        .cta-fixo {
+            position: fixed; bottom: 0; left: 0; right: 0; z-index: 880;
+            background: rgba(10, 3, 14, 0.93);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-top: 1px solid rgba(217,232,15,0.28);
+            padding: 0.7rem 0;
+            transform: translateY(110%);
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .cta-fixo.visivel { transform: translateY(0); }
+        .cta-fixo .wrap { display: flex; align-items: center; gap: 1rem; justify-content: space-between; }
+        .cta-fixo-texto { font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.05em; color: var(--cinza-estrutura); }
+        .cta-fixo-texto b { color: var(--amarelo-ruptura); }
+        .cta-fixo .btn { padding: 0.72rem 1.5rem; font-size: 0.75rem; flex-shrink: 0; }
+        @media (max-width: 620px) { .cta-fixo-texto { display: none; } .cta-fixo .btn { width: 100%; } }
+
+        /* ═══ REVELAÇÃO ═══ */
+        .reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .reveal.dentro { opacity: 1; transform: none; }
+        @media (prefers-reduced-motion: reduce) {
+            .reveal { opacity: 1; transform: none; transition: none; }
+            html { scroll-behavior: auto; }
+        }
+    
+        /* ═══════════════════════════════════════
+           V3 · componentes novos (análise 30/09)
+           ═══════════════════════════════════════ */
+
+        /* contador da virada do lote */
+        .virada-chip {
+            display: inline-flex; align-items: center; gap: 0.6rem;
+            padding: 0.55rem 1.15rem;
+            background: rgba(217, 232, 15, 0.12);
+            border: 1px solid rgba(217, 232, 15, 0.45);
+            border-radius: 999px;
+            font-family: var(--mono); font-size: 0.76rem; font-weight: 700;
+            letter-spacing: 0.08em; text-transform: uppercase; color: var(--branco);
+        }
+        .virada-chip b { color: var(--amarelo-ruptura); font-variant-numeric: tabular-nums; }
+        .virada-chip { white-space: nowrap; }
+        @media (max-width: 480px) { .virada-chip { font-size: 0.64rem; padding: 0.5rem 0.9rem; } }
+        .virada-chip::before {
+            content: ''; width: 8px; height: 8px; border-radius: 50%;
+            background: var(--amarelo-ruptura);
+            box-shadow: 0 0 10px var(--amarelo-ruptura);
+            animation: pulsar 1.8s ease-in-out infinite;
+        }
+        @media (prefers-reduced-motion: reduce) { .virada-chip::before { animation: none; } }
+
+        .hero-sec { margin-top: 1.1rem; }
+        .hero-sec a {
+            color: var(--cinza-estrutura); font-size: 0.92rem;
+            text-decoration: underline; text-underline-offset: 4px;
+        }
+        .hero-sec a:hover { color: var(--branco); }
+        .hero-prova-nota {
+            margin-top: 2.1rem;
+            font-family: var(--mono); font-size: 0.73rem;
+            letter-spacing: 0.12em; text-transform: uppercase; color: var(--texto-suave);
+        }
+        .hero-prova-nota b { color: var(--amarelo-ruptura); }
+
+        /* parede de números */
+        .numeros { background: var(--fundo-alt); }
+        .numeros-grade {
+            display: grid; gap: 1rem; margin-top: 2.6rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+        .numero-card {
+            background: var(--card); border: 1px solid var(--card-borda);
+            border-radius: 14px; padding: 1.8rem 1.6rem 1.6rem;
+            display: flex; flex-direction: column; gap: 0.55rem;
+        }
+        .numero-valor {
+            font-family: var(--display); font-weight: 900;
+            font-size: clamp(2.2rem, 4vw, 3rem);
+            color: var(--amarelo-ruptura); line-height: 1; text-transform: uppercase;
+        }
+        .numero-frase { color: var(--branco); font-size: 0.98rem; line-height: 1.55; }
+        .numero-quem {
+            font-family: var(--mono); font-size: 0.72rem;
+            letter-spacing: 0.1em; text-transform: uppercase; color: var(--texto-suave);
+        }
+        .numero-print { margin-top: auto; padding-top: 1rem; }
+        .numero-print img {
+            border-radius: 8px; border: 1px solid var(--card-borda);
+            cursor: zoom-in; width: 100%;
+            height: 340px; object-fit: cover; object-position: top center;
+        }
+        @media (max-width: 520px) { .numero-print img { height: 300px; } }
+        .numeros-acao { text-align: center; margin-top: 2.6rem; }
+
+        /* pra quem é / não é */
+        .pq-grade { display: grid; gap: 1.2rem; grid-template-columns: 1fr 1fr; margin-top: 2.6rem; }
+        @media (max-width: 820px) { .pq-grade { grid-template-columns: 1fr; } }
+        .pq-card {
+            background: var(--card); border: 1px solid var(--card-borda);
+            border-radius: 14px; padding: 1.7rem 1.6rem;
+        }
+        .pq-card h3 { margin-bottom: 1.1rem; }
+        .pq-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+        .pq-card li { display: flex; gap: 0.65rem; color: var(--texto-suave); font-size: 0.95rem; line-height: 1.55; }
+        .pq-sim li::before { content: '✓'; color: var(--amarelo-ruptura); font-weight: 700; flex-shrink: 0; }
+        .pq-nao li::before { content: '✕'; color: var(--roxo-expansao); font-weight: 700; flex-shrink: 0; }
+
+        /* vídeo de objeção (um vídeo + texto lado a lado) */
+        .obj-video {
+            display: grid; gap: 2.2rem; grid-template-columns: 400px 1fr;
+            align-items: center; margin-top: 2.8rem;
+        }
+        @media (max-width: 860px) { .obj-video { grid-template-columns: 1fr; } }
+        .obj-video video {
+            width: 100%; aspect-ratio: 16/9; border-radius: 12px;
+            border: 1px solid var(--card-borda); background: #000;
+        }
+        .obj-video .obj-rotulo {
+            font-family: var(--mono); font-size: 0.72rem; font-weight: 700;
+            letter-spacing: 0.14em; text-transform: uppercase;
+            color: var(--amarelo-ruptura); display: block; margin-bottom: 0.7rem;
+        }
+        .obj-video blockquote { margin: 0.8rem 0 0.5rem; color: var(--branco); font-size: 1.02rem; line-height: 1.6; }
+        .obj-video cite { font-style: normal; font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--texto-suave); }
+
+        /* o caos em 4 letras */
+        .caos-grade {
+            display: grid; gap: 1rem; margin-top: 2.6rem;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        }
+        .caos-card {
+            background: var(--card); border: 1px solid var(--card-borda);
+            border-radius: 14px; padding: 1.7rem 1.5rem;
+        }
+        .caos-letra {
+            font-family: var(--display); font-weight: 900; font-size: 2.6rem;
+            color: var(--amarelo-ruptura); line-height: 1; margin-bottom: 0.7rem;
+        }
+        .caos-card h3 { font-size: 1.02rem; margin-bottom: 0.5rem; }
+        .caos-card p { color: var(--texto-suave); font-size: 0.92rem; line-height: 1.6; }
+        .caos-remate { max-width: 640px; margin: 2.4rem auto 0; text-align: center; color: var(--texto-suave); }
+        .caos-remate b { color: var(--branco); }
+
+        /* quem conduz */
+        .conduz-lista { list-style: none; margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.7rem; }
+        .conduz-lista li { display: flex; gap: 0.7rem; align-items: baseline; flex-wrap: wrap; color: var(--texto-suave); font-size: 0.97rem; }
+        .conduz-lista b { color: var(--branco); }
+        .conduz-lista .frente {
+            font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.1em;
+            text-transform: uppercase; color: var(--amarelo-ruptura);
+            border: 1px solid rgba(217, 232, 15, 0.35); border-radius: 5px; padding: 1px 7px;
+        }
+
+        /* bloco de decisão (fundo lima) */
+        .decisao {
+            background: var(--amarelo-ruptura); color: var(--preto);
+            border-radius: 18px; padding: clamp(1.9rem, 4vw, 3rem);
+            max-width: 720px; margin: 2.8rem auto 0;
+            box-shadow: 0 0 70px rgba(217, 232, 15, 0.22), 0 30px 70px rgba(0, 0, 0, 0.45);
+        }
+        .decisao .virada-chip {
+            background: rgba(0, 0, 0, 0.08); border-color: rgba(0, 0, 0, 0.4);
+            color: var(--preto); margin-bottom: 1.4rem;
+        }
+        .decisao .virada-chip b { color: var(--preto); }
+        .decisao .virada-chip::before { background: var(--preto); box-shadow: none; }
+        .decisao-rotulo {
+            font-family: var(--mono); font-size: 0.72rem; font-weight: 700;
+            letter-spacing: 0.14em; text-transform: uppercase; color: rgba(0, 0, 0, 0.7);
+        }
+        .decisao-preco { display: flex; align-items: baseline; gap: 1.1rem; flex-wrap: wrap; margin: 0.6rem 0 0.2rem; }
+        .decisao-preco .preco-agora {
+            font-family: var(--display); font-weight: 900;
+            font-size: clamp(3.6rem, 9vw, 5.2rem); line-height: 1;
+            letter-spacing: -0.03em; color: var(--preto);
+        }
+        .decisao-preco .preco-agora sup { font-size: 0.35em; font-weight: 800; vertical-align: super; }
+        .decisao-preco .preco-depois { font-size: 0.98rem; color: rgba(0, 0, 0, 0.75); }
+        .decisao-vantagem { font-weight: 700; color: var(--preto); margin-bottom: 1.3rem; }
+        .decisao-entregas { list-style: none; margin: 0 0 1.6rem; display: flex; flex-direction: column; gap: 0.5rem; color: var(--preto); font-size: 0.96rem; }
+        .decisao-entregas li::before { content: '→ '; font-weight: 800; }
+        .btn-comprar {
+            display: block; width: 100%; text-align: center;
+            background: var(--preto); color: var(--branco);
+            font-family: var(--display); font-weight: 800; text-transform: uppercase;
+            letter-spacing: 0.05em; font-size: 1.02rem;
+            padding: 1.2rem 1.4rem; border-radius: 12px; text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .btn-comprar:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35); }
+        .decisao-nota { text-align: center; font-size: 0.8rem; color: rgba(0, 0, 0, 0.7); margin-top: 0.8rem; }
+
+        /* escada de lotes em uma linha */
+        .escada-linha {
+            display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap;
+            margin-top: 1.5rem; font-family: var(--mono); font-size: 0.76rem;
+        }
+        .escada-linha span { padding: 0.5rem 0.85rem; border-radius: 8px; border: 1px solid rgba(0, 0, 0, 0.35); color: rgba(0, 0, 0, 0.8); }
+        .escada-linha .atual { background: var(--preto); color: var(--amarelo-ruptura); border-color: var(--preto); font-weight: 700; }
+
+        /* cartão do sócio */
+        .socio-card {
+            max-width: 720px; margin: 1.2rem auto 0;
+            background: var(--card); border: 1px solid var(--card-borda); border-radius: 14px;
+            padding: 1.5rem 1.7rem;
+            display: flex; align-items: center; justify-content: space-between;
+            gap: 1.2rem; flex-wrap: wrap;
+        }
+        .socio-card .s-rotulo {
+            font-family: var(--mono); font-size: 0.68rem; font-weight: 700;
+            letter-spacing: 0.14em; text-transform: uppercase;
+            color: var(--amarelo-ruptura); display: block; margin-bottom: 0.4rem;
+        }
+        .socio-card .s-txt b { color: var(--amarelo-ruptura); }
+
+        /* dúvidas ao lado do botão */
+        .duvidas { max-width: 720px; margin: 1.8rem auto 0; display: grid; gap: 0.6rem; }
+        .duvidas details {
+            background: transparent; border: 1px solid var(--card-borda);
+            border-radius: 10px; padding: 0.8rem 1.05rem;
+        }
+        .duvidas summary { cursor: pointer; font-size: 0.92rem; color: var(--branco); font-weight: 600; list-style: none; }
+        .duvidas summary::-webkit-details-marker { display: none; }
+        .duvidas p { margin-top: 0.55rem; font-size: 0.88rem; color: var(--texto-suave); line-height: 1.6; }
+
+        /* 1ª edição compacta */
+        .primeira-video { max-width: 760px; margin: 2.6rem auto 0; }
+        .primeira-video video {
+            width: 100%; aspect-ratio: 16/9; border-radius: 12px;
+            border: 1px solid var(--card-borda); background: #000;
+        }
+        .primeira-grade { display: grid; gap: 0.8rem; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 230px; margin-top: 0.9rem; }
+        @media (max-width: 720px) { .primeira-grade { grid-template-columns: 1fr; grid-auto-rows: 210px; } }
+        .primeira-grade figure { margin: 0; border-radius: 10px; overflow: hidden; border: 1px solid var(--card-borda); }
+        .primeira-grade img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.85); }
+
+        /* correção da análise: aviso de preço visível no celular */
+        .topo-aviso { white-space: nowrap; }
+        @media (max-width: 900px) {
+            .topo-aviso { display: inline-flex !important; font-size: 0.7rem; }
+            .aviso-extra { display: none; }
+        }
+        @media (max-width: 680px) {
+            .topo .topo-marca span { display: none; }
+        }
+        .cta-fixo-texto b { font-variant-numeric: tabular-nums; }
+
+    </style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WT73H84R"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="grao"></div>
+
+<!-- ═══ 0 · BARRA FIXA DO TOPO (preço visível, botão direto no checkout) ═══ -->
+<header class="topo">
+    <div class="wrap">
+        <a href="#hero" class="topo-marca" style="text-decoration:none;color:inherit">
+            <img src="/assets/ADVM_MARCA-07.png" alt="Advocacia de Monopólio" width="1009" height="287">
+            <span>Fim do Caos<i>™</i> · 2ª edição</span>
+        </a>
+        <!-- LOTE: atualizar a cada virada -->
+        <div class="topo-aviso"><b>06 e 07 de novembro</b><span class="aviso-extra"> · Alphaville · SP</span></div>
+        <a href="https://wa.me/554796796013?text=Oi!%20Quero%20garantir%20minha%20vaga%20no%20Fim%20do%20Caos%202%C2%AA%20edi%C3%A7%C3%A3o." target="_blank" rel="noopener" class="btn btn-primario">Falar com a equipe</a>
+    </div>
+</header>
+
+<!-- ═══ 1 · TOPO COM OFERTA (estrutura A da análise: preço, prazo e checkout direto) ═══ -->
+<section class="hero" id="hero">
+    <div class="hero-fundo"></div>
+    <img class="hero-grafismo" src="/assets/ADVM_MARCA-18.png" alt="" width="694" height="700">
+    <div class="wrap">
+        <!-- CONTADOR: a data da virada é PLACEHOLDER, trocar no script lá embaixo -->
+        <div class="reveal"><span class="virada-chip">Lote atual aberto · na virada, o valor sobe</span></div>
+
+        <div class="hero-tipo reveal" style="margin-top:1.4rem">Imersão presencial para advogados</div>
+        <div class="hero-data-local reveal"><b>06 e 07 de novembro</b> · Casa do Storytelling · Alphaville · SP</div>
+
+        <h1 class="reveal">
+            Pare de depender de <span class="destaque">indicação</span> para fechar contratos
+        </h1>
+
+        <p class="hero-sub reveal">
+            Em 2 dias com os 5 sócios da ADVM, você define o nicho que o seu
+            escritório vai dominar e o plano para atrair clientes nele.
+        </p>
+
+        <div class="hero-acao reveal">
+            <a href="https://wa.me/554796796013?text=Oi!%20Quero%20garantir%20minha%20vaga%20no%20Fim%20do%20Caos%202%C2%AA%20edi%C3%A7%C3%A3o." target="_blank" rel="noopener" class="btn btn-primario">Quero minha vaga</a>
+        </div>
+        <div class="hero-sec reveal"><a href="#leva">Ver o que você leva ↓</a></div>
+
+        <p class="hero-prova-nota reveal"><b>+90 advogados</b> na 1ª edição · sem gravação e sem replay</p>
+    </div>
+</section>
+
+<!-- ═══ 2 · FAIXAS ═══ -->
+<div class="faixas" aria-hidden="true">
+    <div class="faixa faixa-1">
+        <div class="faixa-conteudo">
+            <span>Fim do Caos™</span><span>◆</span><span>2ª edição</span><span>◆</span><span>Alphaville 06.11</span><span>◆</span>
+            <span>Fim do Caos™</span><span>◆</span><span>2ª edição</span><span>◆</span><span>Alphaville 06.11</span><span>◆</span>
+            <span>Fim do Caos™</span><span>◆</span><span>2ª edição</span><span>◆</span><span>Alphaville 06.11</span><span>◆</span>
+            <span>Fim do Caos™</span><span>◆</span><span>2ª edição</span><span>◆</span><span>Alphaville 06.11</span><span>◆</span>
+        </div>
+    </div>
+    <div class="faixa faixa-2">
+        <div class="faixa-conteudo">
+            <span>Território &gt; Nicho</span><span>◆</span><span>06 e 07 de novembro</span><span>◆</span><span>Porta fechada</span><span>◆</span>
+            <span>Território &gt; Nicho</span><span>◆</span><span>06 e 07 de novembro</span><span>◆</span><span>Porta fechada</span><span>◆</span>
+            <span>Território &gt; Nicho</span><span>◆</span><span>06 e 07 de novembro</span><span>◆</span><span>Porta fechada</span><span>◆</span>
+            <span>Território &gt; Nicho</span><span>◆</span><span>06 e 07 de novembro</span><span>◆</span><span>Porta fechada</span><span>◆</span>
+        </div>
+    </div>
+</div>
+
+<!-- ═══ 3 · PAREDE DE NÚMEROS (primeira prova, para quem sai cedo) ═══ -->
+<section class="bloco numeros" id="resultados">
+    <div class="wrap">
+        <div class="centro">
+            <span class="eyebrow">Resultados de mentorados</span>
+            <h2 class="display">O que acontece quando o advogado <span class="amarelo">escolhe um território</span></h2>
+            <p class="lead">Clique no print para ler a conversa inteira.</p>
+        </div>
+
+        <div class="numeros-grade">
+            <article class="numero-card reveal">
+                <div class="numero-valor">R$ 45 mil</div>
+                <p class="numero-frase">Primeiro contrato de R$ 45 mil, com o trabalho feito no Instagram.</p>
+                <span class="numero-quem">Ariane Vilas Boas · mentorada ADVM</span>
+                <div class="numero-print"><img src="/assets/depoimento-ariane-contrato.jpeg" alt="Print da conversa da Ariane sobre o contrato de R$ 45 mil" loading="lazy" width="740" height="1600"></div>
+            </article>
+
+            <article class="numero-card reveal">
+                <div class="numero-valor">2 contratos</div>
+                <p class="numero-frase">Dois contratos na mesma semana, de clientes que chegaram pelo Instagram.</p>
+                <span class="numero-quem">Mônica Andrade · mentorada ADVM</span>
+                <div class="numero-print"><img src="/assets/depoimento-monica-contratos.jpeg" alt="Print da conversa da Mônica sobre os dois contratos na mesma semana" loading="lazy" width="740" height="1600"></div>
+            </article>
+
+            <article class="numero-card reveal">
+                <div class="numero-valor">R$ 7 mil</div>
+                <p class="numero-frase">R$ 7 mil com uma cliente que já tinha sumido duas vezes.</p>
+                <span class="numero-quem">Brenda Wobeto · mentorada ADVM</span>
+                <div class="numero-print"><img src="/assets/depoimento-brenda-contrato.jpeg" alt="Print da conversa da Brenda sobre o contrato de R$ 7 mil" loading="lazy" width="740" height="1600"></div>
+            </article>
+        </div>
+
+        <div class="numeros-acao reveal">
+            <a href="https://wa.me/554796796013?text=Oi!%20Quero%20garantir%20minha%20vaga%20no%20Fim%20do%20Caos%202%C2%AA%20edi%C3%A7%C3%A3o." target="_blank" rel="noopener" class="btn btn-primario">Quero minha vaga</a>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ 3b · FAIXA DOS MENTORADOS (junto dos resultados) ═══ -->
+<section class="mentorados">
+    <div class="wrap">
+        <span class="eyebrow">A foto que resume</span>
+        <h2 class="display">Todos nesta foto são <span class="amarelo">mentorados da ADVM</span></h2>
+        <p class="lead">Advogados que compraram a causa do território, aplicaram a doutrina no próprio escritório e <b>têm resultado pra mostrar</b>. Em novembro, a sala é sua.</p>
+    </div>
+</section>
+
+<!-- ═══ 4 · PRA QUEM É (o advogado se reconhece em 3 linhas) ═══ -->
+<section class="bloco pq" id="paraquem">
+    <div class="wrap">
+        <div class="centro">
+            <span class="eyebrow">Antes de continuar</span>
+            <h2 class="display">Pra quem é <span class="amarelo">esta sala</span></h2>
+        </div>
+
+        <div class="pq-grade">
+            <div class="pq-card pq-sim reveal">
+                <h3 class="display">É pra você se</h3>
+                <ul>
+                    <li>Já tem escritório e atende clientes todos os meses</li>
+                    <li>Fatura, mas o próximo cliente ainda depende de indicação</li>
+                    <li>Quer nichar sem abrir mão da carteira que já construiu</li>
+                    <li>Está cansado de disputar preço com advogado que entrega menos</li>
+                </ul>
+            </div>
+            <div class="pq-card pq-nao reveal">
+                <h3 class="display">Ainda não é, se</h3>
+                <ul>
+                    <li>Você ainda não advoga na ponta, atendendo cliente real</li>
+                    <li>Procura fórmula pronta que dispense decisão e trabalho</li>
+                    <li>Quer conteúdo gravado pra assistir depois: aqui nada é gravado</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- objeção nº 1 respondida logo aqui: medo de perder cliente ao nichar -->
+        <div class="obj-video reveal">
+            <video controls preload="none" playsinline data-poster="/assets/poster-dep03.jpg">
+                <source src="/assets/dep03.mp4" type="video/mp4">
+            </video>
+            <div>
+                <span class="obj-rotulo">O medo que trava todo mundo: "vou perder clientes se nichar"</span>
+                <blockquote>"Saio daqui procurando nichar ainda mais o meu público, para que eu consiga quadruplicar meus honorários. A gente tem muito medo de nichar e acaba perdendo cliente por isso."</blockquote>
+                <cite>Isabelle · Direito da saúde · ABC Paulista · gravado na 1ª edição</cite>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ 5 · O CAOS DO ESCRITÓRIO (nomeia a dor) ═══ -->
+<section class="bloco caos" style="background:var(--fundo-alt)">
+    <div class="wrap">
+        <div class="centro">
+            <span class="eyebrow">O problema tem nome</span>
+            <h2 class="display">O caos do escritório tem <span class="amarelo">4 letras</span></h2>
+        </div>
+
+        <div class="caos-grade">
+            <article class="caos-card reveal">
+                <div class="caos-letra">C</div>
+                <h3 class="display">Crescimento sem direção</h3>
+                <p>O escritório cresce no esforço, caso a caso, sem saber qual mercado está construindo.</p>
+            </article>
+            <article class="caos-card reveal">
+                <div class="caos-letra">A</div>
+                <h3 class="display">Aquisição sem previsibilidade</h3>
+                <p>Segunda-feira chega sem previsão de cliente novo. A agenda depende de quem indica.</p>
+            </article>
+            <article class="caos-card reveal">
+                <div class="caos-letra">O</div>
+                <h3 class="display">Operação sobrecarregada</h3>
+                <p>Noite virada em caso que você nem queria ter pego, e desconto dado por medo de perder o negócio.</p>
+            </article>
+            <article class="caos-card reveal">
+                <div class="caos-letra">S</div>
+                <h3 class="display">Sócio como gargalo</h3>
+                <p>Tudo passa por você. O escritório para quando você para.</p>
+            </article>
+        </div>
+
+        <p class="caos-remate reveal">Esse caos parece emocional. <b>Ele é estrutural</b>: nasce de uma causa só, a atenção fragmentada, a sua e a do mercado. E enquanto a causa continuar viva, dezembro chega e você repete a frase do ano passado: ano que vem será diferente.</p>
+    </div>
+</section>
+
+<!-- ═══ 6 · TERRITÓRIO, NÃO NICHO (a virada, com o caso que prova) ═══ -->
+<section class="bloco territorio">
+    <div class="wrap">
+        <div class="centro">
+            <span class="eyebrow">A virada</span>
+            <h2 class="display">Território, <span class="amarelo">não nicho</span></h2>
+            <p class="lead">O mercado jurídico é um campo infinito pra quem se diferencia e finito pra quem generaliza. <b>Existem tribos inteiras sem nenhum advogado que fale a língua delas</b>: advogado de ubers, de logísticas, de mecânicos. Quando você concentra a sua atenção num espaço só, o mercado devolve na mesma moeda.</p>
+        </div>
+
+        <div class="obj-video reveal">
+            <video controls preload="none" playsinline data-poster="/assets/poster-dep04.jpg">
+                <source src="/assets/dep04.mp4" type="video/mp4">
+            </video>
+            <div>
+                <span class="obj-rotulo">Funciona na minha área? O caso que responde</span>
+                <blockquote>O Guilherme Cattani era um advogado cheio de técnica e sem direção. Ele nomeou um mercado que não existia, o <b style="color:var(--amarelo-ruptura)">Direito da Estética</b>, ocupou antes de todo mundo e fechou as fronteiras. Hoje esse mercado tem nome, tem doutrina e tem dono.</blockquote>
+                <cite>No vídeo: Barbara · Direito médico veterinário · outro território que ninguém ocupava</cite>
+            </div>
+        </div>
+
+        <p class="caos-remate reveal">E o momento importa: 2027 já está sendo dividido. Advogado entrando no mercado em volume recorde, IA derrubando o preço da hora técnica, cliente pesquisando antes de aceitar indicação. <b>Posição se constrói antes da divisão, não depois.</b></p>
+    </div>
+</section>
+
+<!-- ═══ 7 · O QUE VOCÊ LEVA + PROGRAMAÇÃO ═══ -->
+<section class="bloco leva" id="leva">
+    <div class="wrap">
+        <div class="centro">
+            <span class="eyebrow">Entrega concreta</span>
+            <h2 class="display">O que você leva <span class="amarelo">dos 2 dias</span></h2>
+            <p class="lead">06 e 07 de novembro, das <b>08h30 às 18h00</b>, em Alphaville. Repare que a palavra é <b>resolvido</b>, não apresentado.</p>
+        </div>
+
+        <div class="leva-lista">
+            <article class="leva-card reveal">
+                <figure class="leva-figura"><img src="/assets/evento-sala-wide.jpg" alt="Sala do Fim do Caos durante a palestra sobre território" loading="lazy" width="1920" height="1280"></figure>
+                <div class="leva-corpo">
+                    <div class="leva-num">1</div>
+                    <h3 class="display">Mapa do <span class="destaque">seu território</span></h3>
+                    <p>No Brasil existem inúmeras tribos que não são exploradas e estão disponíveis para serem monopolizadas. Advogado de ubers, de logísticas, de mecânicos: infinitas. <b>Você sai sabendo qual recorte de mercado deve ocupar e monopolizar.</b></p>
+                </div>
+            </article>
+
+            <article class="leva-card reveal">
+                <figure class="leva-figura"><img src="/assets/evento-palestrante-1.jpg" alt="Palestra sobre narrativa e posicionamento" loading="lazy" width="1400" height="933"></figure>
+                <div class="leva-corpo">
+                    <div class="leva-num">2</div>
+                    <h3 class="display">A narrativa que <span class="destaque">atrai o cliente certo</span></h3>
+                    <p>Você aprenderá como gerar desejo na tribo que escolher. Como transformar atenção em desejo e desejo em dinheiro. <b>Tirar o posicionamento do mundo das ideias e colocar na prática.</b></p>
+                </div>
+            </article>
+
+            <article class="leva-card reveal">
+                <figure class="leva-figura"><img src="/assets/evento-venda-palco.jpg" alt="Palestra sobre venda no Fim do Caos" loading="lazy" width="1200" height="2133" style="object-position: 50% 18%"></figure>
+                <div class="leva-corpo">
+                    <div class="leva-num">3</div>
+                    <h3 class="display">Venda <span class="destaque">sem parecer venda</span></h3>
+                    <p>Você aprenderá como transformar o desejo em dinheiro. <b>Como criar canais de aquisição de clientes e que serviços vender para a sua tribo monopolizada.</b> Foi daqui que saiu a técnica que rendeu à Brenda um contrato de R$ 7 mil com uma cliente que tinha sumido duas vezes.</p>
+                </div>
+            </article>
+
+            <article class="leva-card reveal">
+                <figure class="leva-figura"><img src="/assets/evento-turma.jpg" alt="Turma reunida na 1ª edição" loading="lazy" width="1600" height="1067"></figure>
+                <div class="leva-corpo">
+                    <div class="leva-num">4</div>
+                    <h3 class="display">Uma sala inteira de advogados <span class="destaque">no mesmo jogo</span></h3>
+                    <p>Você terá acesso a pessoas com desejos e motivos semelhantes. Na primeira edição, saíram negócios de múltiplos dígitos entre os participantes. <b>Como o objetivo é o monopólio, não há concorrência: há cooperação entre as tribos.</b></p>
+                </div>
+            </article>
+        </div>
+
+        <div class="centro" style="margin-top:3rem">
+            <a href="https://wa.me/554796796013?text=Oi!%20Quero%20garantir%20minha%20vaga%20no%20Fim%20do%20Caos%202%C2%AA%20edi%C3%A7%C3%A3o." target="_blank" rel="noopener" class="btn btn-primario">Quero minha vaga</a>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ 8 · QUEM CONDUZ (os 5 sócios, cada um com a sua frente) ═══ -->
+<section class="bloco palco">
+    <div class="wrap split">
+        <figure class="palco-figura reveal">
+            <img src="/assets/mentores_advm.jpg" alt="Os sócios da Advocacia de Monopólio no palco da 1ª edição" loading="lazy" width="1600" height="1067">
+            <figcaption>Os sócios da ADVM no palco da 1ª edição</figcaption>
+        </figure>
+
+        <div class="split-texto reveal">
+            <span class="eyebrow">Quem conduz os 2 dias</span>
+            <h2 class="display">5 sócios, <span class="amarelo">5 frentes</span></h2>
+            <p style="margin-top:1rem">Cada um opera no dia a dia a área que ensina no palco, na própria ADVM e nos escritórios dos mentorados. Ninguém aqui ensina teoria emprestada.</p>
+            <ul class="conduz-lista">
+                <li><b>Eduardo Matzenbacher</b> <span class="frente">Governança</span></li>
+                <li><b>Guilherme Cattani</b> <span class="frente">Posicionamento e marketing</span></li>
+                <li><b>Gabriel Bellini</b> <span class="frente">Vendas</span></li>
+                <li><b>Maitê Guerra</b> <span class="frente">Produtividade</span></li>
+                <li><b>Ana Lúcia Bittencourt</b> <span class="frente">Persuasão</span></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ 9 · SEU INGRESSO (bloco de decisão; sem animação de entrada, por decisão da análise) ═══ -->
+<section class="bloco ingressos" id="ingressos">
+    <div class="wrap">
+        <div class="centro">
+            <span class="eyebrow">Hora de decidir</span>
+            <h2 class="display">Seu <span class="amarelo">ingresso</span></h2>
+        </div>
+
+        <!-- âncora dos botões: o cartão do preço, não o título da seção -->
+        <div class="decisao" id="lote-0">
+            <span class="virada-chip">Lote atual · na virada, o valor sobe</span>
+            <div class="decisao-rotulo">Ingresso Fim do Caos · 2ª edição · 06 e 07/11</div>
+            <p class="decisao-vantagem">Fale com a equipe e garanta sua vaga antes da virada do lote.</p>
+            <ul class="decisao-entregas">
+                <li>O mapa do seu território</li>
+                <li>A narrativa que atrai o cliente certo</li>
+                <li>Como vender sem parecer venda</li>
+                <li>Uma sala de advogados no mesmo jogo</li>
+            </ul>
+            <a href="https://wa.me/554796796013?text=Oi!%20Quero%20garantir%20minha%20vaga%20no%20Fim%20do%20Caos%202%C2%AA%20edi%C3%A7%C3%A3o." target="_blank" rel="noopener" class="btn-comprar">Quero minha vaga</a>
+            <p class="decisao-nota">Atendimento direto com a equipe da ADVM · capacidade limitada ao espaço físico</p>
+        </div>
+
+        <div class="socio-card">
+            <div class="s-txt">
+                <span class="s-rotulo">Vai com seu sócio?</span>
+                O <b>segundo ingresso sai com 50% de desconto.</b> Quem decide com o sócio decide junto.
+            </div>
+            <a href="https://wa.me/554796796013?text=Oi!%20Quero%20garantir%20minha%20vaga%20no%20Fim%20do%20Caos%202%C2%AA%20edi%C3%A7%C3%A3o." target="_blank" rel="noopener" class="btn btn-vazado">Quero levar meu sócio <span class="seta">→</span></a>
+        </div>
+
+        <!-- dúvidas respondidas na hora do clique -->
+        <div class="duvidas">
+            <details>
+                <summary>Isso é venda de mentoria disfarçada?</summary>
+                <p>O evento é o evento. Existe uma mentoria e ela é apresentada, mas os dois dias entregam sozinhos. Quem sair sem comprar nada sai com o mapa.</p>
+            </details>
+            <details>
+                <summary>Advogo há pouco tempo. Faz sentido pra mim?</summary>
+                <p>Faz, desde que você já atenda cliente. Território se desenha em cima de prática real.</p>
+            </details>
+            <details>
+                <summary>O evento é gravado?</summary>
+                <p>Não. Sem gravação, sem replay, sem material vazando depois. O que acontece na sala fica na sala.</p>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ 10 · A 1ª EDIÇÃO (para quem ainda hesita: 1 vídeo e 3 fotos) ═══ -->
+<section class="bloco video">
+    <div class="video-halo" aria-hidden="true"></div>
+    <div class="wrap centro">
+        <span class="eyebrow">Maio de 2026</span>
+        <h2 class="display">A sala que <span class="amarelo">já encheu uma vez</span></h2>
+        <p class="lead">O resumo do primeiro dia da 1ª edição, como aconteceu.</p>
+
+        <div class="primeira-video reveal">
+            <video controls preload="none" playsinline data-poster="/assets/poster-sameday1.jpg">
+                <source src="/assets/sameday-dia1.mp4" type="video/mp4">
+                Seu navegador não reproduz este vídeo.
+            </video>
+        </div>
+
+        <div class="primeira-grade reveal">
+            <figure><img src="/assets/mostrar_evento_cheio.jpg" alt="Sala cheia na 1ª edição do Fim do Caos" loading="lazy" width="1600" height="1067"></figure>
+            <figure><img src="/assets/mostrar_volume.jpg" alt="Plateia numerosa durante a imersão" loading="lazy" width="1400" height="933"></figure>
+            <figure><img src="/assets/mostrar_evento.jpg" alt="Palco e telão da Advocacia de Monopólio" loading="lazy" width="1400" height="933"></figure>
+        </div>
+
+        <p class="galeria-nota">1ª edição · 29 e 30 de maio de 2026 · <b>+90 advogados presentes</b></p>
+    </div>
+</section>
+
+<!-- ═══ 11 · LOCAL E COMO CHEGAR (3 em cada 4 visitas vêm de fora de SP) ═══ -->
+<section class="bloco local">
+    <div class="wrap">
+        <div class="centro">
+            <span class="eyebrow">Onde acontece</span>
+        </div>
+        <h1 class="local-titulo">Casa do <span class="destaque">Storytelling</span></h1>
+
+        <div class="local-grade">
+            <div class="local-card reveal">
+                <h4>Endereço</h4>
+                <p><b>Av. Sagitário, 138</b><br>Alphaville Conde II<br>Barueri, SP</p>
+            </div>
+            <div class="local-card reveal">
+                <h4>Data e horário</h4>
+                <p><b>06 e 07 de novembro</b><br>Sexta e sábado, das <b>08h30 às 18h00</b></p>
+            </div>
+            <div class="local-card reveal">
+                <h4>Pra quem vem de fora</h4>
+                <ul>
+                    <li>Hotéis a menos de 10 minutos</li>
+                    <li>Congonhas: cerca de 40 min de carro</li>
+                    <li>Guarulhos: cerca de 50 min de carro</li>
+                </ul>
+            </div>
+            <div class="local-card reveal">
+                <h4>Facilidades</h4>
+                <ul>
+                    <li>Estacionamento no local</li>
+                    <li>30 minutos de Pinheiros</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="obj-video reveal" style="margin-top:2.6rem">
+            <video controls preload="none" playsinline data-poster="/assets/poster-dep06.jpg">
+                <source src="/assets/dep06.mp4" type="video/mp4">
+            </video>
+            <div>
+                <span class="obj-rotulo">Vale a pena parar 2 dias e viajar pra isso?</span>
+                <blockquote>"O sentimento é sair daqui inconformado com a forma que a gente trabalha hoje. Quem deixa de vir num evento desses acaba perdendo qualidade de vida."</blockquote>
+                <cite>Lucas · Escritório Andrade Reis · veio de Itapema, SC</cite>
+            </div>
+        </div>
+
+        <div class="mapa reveal">
+            <iframe
+                src="https://maps.google.com/maps?q=Av.%20Sagit%C3%A1rio%20138%20Alphaville%20Conde%20II%20Barueri%20SP&z=15&output=embed"
+                title="Mapa da Casa do Storytelling, Alphaville" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ 12 · FAQ ═══ -->
+<section class="bloco faq">
+    <div class="wrap">
+        <div class="centro">
+            <span class="eyebrow">FAQ</span>
+            <h2 class="display">Perguntas <span class="amarelo">frequentes</span></h2>
+        </div>
+
+        <div class="faq-lista">
+            <details class="faq-item" open>
+                <summary>Qual o horário dos dois dias?<span class="sinal"></span></summary>
+                <div class="faq-resposta">Das 08h30 às 18h00, na sexta e no sábado. Chegue com 30 minutos de antecedência no primeiro dia para o credenciamento.</div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Vou conseguir nichar sem perder os clientes que já tenho?<span class="sinal"></span></summary>
+                <div class="faq-resposta">Essa é a dúvida mais comum da sala, e é exatamente o que o mapa do território resolve: o recorte se desenha em cima da carteira que você já tem, sem abandonar ninguém. Boa parte da sala chega sem nicho e sai com um recorte diferente do que imaginava.</div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Posso levar meu sócio?<span class="sinal"></span></summary>
+                <div class="faq-resposta">Pode, e compensa: na compra de dois ingressos, o segundo sai com 50% de desconto. Fale com a equipe no WhatsApp e garanta os dois.</div>
+            </details>
+
+            <!-- PENDENTE: política de transferência a definir pelo Gabriel -->
+            <details class="faq-item pendente">
+                <summary>E se eu não puder ir?<span class="sinal"></span></summary>
+                <div class="faq-resposta">A confirmar. A política de transferência de titularidade será publicada aqui.</div>
+            </details>
+
+            <details class="faq-item">
+                <summary>O evento é gravado?<span class="sinal"></span></summary>
+                <div class="faq-resposta">Não. Sem gravação, sem replay, sem material vazando depois. O que acontece na sala fica na sala, e é por isso que a conversa é honesta.</div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Sou advogado há pouco tempo. Faz sentido pra mim?<span class="sinal"></span></summary>
+                <div class="faq-resposta">Faz, desde que você já atenda cliente. Território se desenha em cima de prática real. Quem ainda não advoga na ponta vai aproveitar menos.</div>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ 13 · FECHAMENTO ═══ -->
+<section class="fecho">
+    <div class="wrap">
+        <p>Você pode fechar essa página e voltar pra mesma rotina amanhã. Abrir o WhatsApp, torcer por indicação, aceitar o caso errado e chamar isso de estratégia.</p>
+        <p class="escolha">Ou pode decidir que o caos <span class="destaque">acaba em novembro.</span></p>
+        <a href="https://wa.me/554796796013?text=Oi!%20Quero%20garantir%20minha%20vaga%20no%20Fim%20do%20Caos%202%C2%AA%20edi%C3%A7%C3%A3o." target="_blank" rel="noopener" class="btn btn-primario">Quero minha vaga</a>
+        <span class="btn-nota">Atendimento pelo WhatsApp · 06 e 07 de novembro</span>
+        <p class="assinatura">O caos não espera. Nem nós.</p>
+    </div>
+</section>
+
+<!-- ═══ RODAPÉ ═══ -->
+<footer class="rodape">
+    <div class="wrap">
+        <img src="/assets/ADVM_MARCA-09.png" alt="Advocacia de Monopólio" loading="lazy" width="3928" height="313">
+        <p>2026 © Advocacia de Monopólio. Todos os direitos reservados.</p>
+        <span class="selo-evento">Fim do Caos™ 2ª edição</span>
+    </div>
+</footer>
+
+<div class="lightbox" id="lightbox"><img src="" alt="Depoimento ampliado" id="lightbox-img"></div>
+
+<!-- ═══ CTA GRUDADO (sem preço, abrindo o WhatsApp comercial) ═══ -->
+<div class="cta-fixo" id="cta-fixo">
+    <div class="wrap">
+        <div class="cta-fixo-texto"><b>06 e 07 de novembro</b> · Alphaville · SP</div>
+        <a href="https://wa.me/554796796013?text=Oi!%20Quero%20garantir%20minha%20vaga%20no%20Fim%20do%20Caos%202%C2%AA%20edi%C3%A7%C3%A3o." target="_blank" rel="noopener" class="btn btn-primario">Falar no WhatsApp</a>
+    </div>
+</div>
+
+<script>
+(function () {
+    'use strict';
+
+    /* Revelação no scroll (o bloco de decisão fica de fora por design) */
+    var alvos = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+        var obs = new IntersectionObserver(function (entradas) {
+            entradas.forEach(function (e) {
+                if (e.isIntersecting) { e.target.classList.add('dentro'); obs.unobserve(e.target); }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        alvos.forEach(function (a) { obs.observe(a); });
+    } else {
+        alvos.forEach(function (a) { a.classList.add('dentro'); });
+    }
+
+    /* CTA grudado aparece depois do hero e some dentro da seção de ingressos */
+    var ctaFixo = document.getElementById('cta-fixo');
+    var hero = document.getElementById('hero');
+    var ingressos = document.getElementById('ingressos');
+    function avaliarCta() {
+        var passouHero = window.scrollY > hero.offsetHeight * 0.8;
+        var caixaIngressos = ingressos.getBoundingClientRect();
+        var dentroIngressos = caixaIngressos.top < window.innerHeight && caixaIngressos.bottom > 0;
+        ctaFixo.classList.toggle('visivel', passouHero && !dentroIngressos);
+    }
+    window.addEventListener('scroll', avaliarCta, { passive: true });
+    window.addEventListener('resize', avaliarCta);
+    avaliarCta();
+
+    /* Lightbox dos prints */
+    var lightbox = document.getElementById('lightbox');
+    var lightboxImg = document.getElementById('lightbox-img');
+    document.querySelectorAll('.numero-print img').forEach(function (img) {
+        img.addEventListener('click', function () {
+            lightboxImg.src = img.src;
+            lightbox.classList.add('aberto');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    function fecharLightbox() {
+        lightbox.classList.remove('aberto');
+        lightboxImg.src = '';
+        document.body.style.overflow = '';
+    }
+    lightbox.addEventListener('click', fecharLightbox);
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && lightbox.classList.contains('aberto')) { fecharLightbox(); }
+    });
+
+    /* Poster de vídeo só entra quando o card se aproxima da viewport */
+    var videos = document.querySelectorAll('video[data-poster]');
+    function aplicarPoster(v) {
+        if (v.dataset.poster) { v.poster = v.dataset.poster; delete v.dataset.poster; }
+    }
+    if ('IntersectionObserver' in window) {
+        var obsVid = new IntersectionObserver(function (entradas) {
+            entradas.forEach(function (e) {
+                if (e.isIntersecting) { aplicarPoster(e.target); obsVid.unobserve(e.target); }
+            });
+        }, { rootMargin: '600px 0px' });
+        videos.forEach(function (v) { obsVid.observe(v); });
+    } else {
+        videos.forEach(aplicarPoster);
+    }
+
+})();
+</script>
+
+</body>
+</html>

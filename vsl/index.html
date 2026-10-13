@@ -486,6 +486,7 @@
             display: grid; gap: 1rem; margin-top: 3rem;
             grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
         }
+        .lotes-unico { grid-template-columns: minmax(0, 400px); justify-content: center; }
         .lote {
             position: relative;
             background: var(--card); border: 1px solid var(--card-borda);
@@ -708,7 +709,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <span>Fim do Caos<i>™</i> · 2ª edição</span>
         </a>
         <!-- LOTE: atualizar aviso a cada virada de lote -->
-        <div class="topo-aviso">Lote 0 aberto · <b>R$ 147</b> · o preço sobe na virada</div>
+        <div class="topo-aviso">Ingresso · <b>R$ 497</b> · o valor sobe na virada do lote</div>
         <a href="#ingressos" class="btn btn-primario">Garantir minha vaga</a>
     </div>
 </header>
@@ -737,7 +738,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <!-- LOTE: atualizar a cada virada. Sem preço no hero (decisão 09/09). -->
-        <div class="reveal"><a class="hero-lote" href="#ingressos"><b>Lote zero aberto</b> · garantindo agora você paga mais barato</a></div>
+        <div class="reveal"><a class="hero-lote" href="#ingressos"><b>Lote atual aberto</b> · na virada, o valor sobe</a></div>
     </div>
 </section>
 
@@ -919,48 +920,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="wrap">
         <div class="centro">
             <span class="eyebrow">Hora de decidir</span>
-            <h2 class="display">Escolha <span class="amarelo">seu lote</span></h2>
+            <h2 class="display">Seu <span class="amarelo">ingresso</span></h2>
             <p class="lead">
-                Mesmo evento, mesmas entregas. O que muda é quanto você paga por ter decidido antes.
-                <b>Quando o lote vira, o preço sobe e não volta.</b>
+                Dois dias, os 5 sócios da ADVM e um ingresso único.
+                <b>Quando o lote vira, o valor sobe e não volta.</b>
             </p>
         </div>
 
         <!-- LOTES: a cada virada, mover .lote-ativo, trocar as .lote-fechado e atualizar
              os avisos do topo, do hero e do CTA fixo. Critério de virada é decisão interna:
              a página nunca diz quando nem por quê. -->
-        <div class="lotes">
+        <div class="lotes lotes-unico">
             <article class="lote lote-ativo reveal">
-                <span class="lote-selo">Aberto agora</span>
-                <div class="lote-nome">Lote 0</div>
-                <div class="lote-preco"><span class="cifrao">R$</span>147</div>
-                <div class="lote-vagas">Preço de abertura</div>
-                <p class="lote-virada">O menor valor que esse ingresso vai ter. Vale só enquanto o lote 0 estiver aberto.</p>
-                <a href="https://chk.eduzz.com/G92KE35KWE" target="_blank" rel="noopener" class="btn btn-primario">Garantir por R$ 147</a>
-            </article>
-
-            <article class="lote lote-fechado reveal">
-                <div class="lote-nome">Lote 1</div>
-                <div class="lote-preco"><span class="cifrao">R$</span>297</div>
-                <div class="lote-vagas">Em breve</div>
-                <p class="lote-virada">Abre na virada do lote 0.</p>
-                <span class="btn btn-vazado">Ainda não abriu</span>
-            </article>
-
-            <article class="lote lote-fechado reveal">
-                <div class="lote-nome">Lote 2</div>
-                <div class="lote-preco"><span class="cifrao">R$</span>397</div>
-                <div class="lote-vagas">Em breve</div>
-                <p class="lote-virada">Abre na virada do lote 1.</p>
-                <span class="btn btn-vazado">Ainda não abriu</span>
-            </article>
-
-            <article class="lote lote-fechado reveal">
-                <div class="lote-nome">Lote 3</div>
+                <span class="lote-selo">Lote atual</span>
+                <div class="lote-nome">Ingresso · 2ª edição</div>
                 <div class="lote-preco"><span class="cifrao">R$</span>497</div>
-                <div class="lote-vagas">Em breve</div>
-                <p class="lote-virada">Último lote da segunda edição.</p>
-                <span class="btn btn-vazado">Ainda não abriu</span>
+                <div class="lote-vagas">06 e 07 de novembro · Alphaville</div>
+                <p class="lote-virada">Vale enquanto o lote atual estiver aberto. Na virada, o valor sobe e não volta.</p>
+                <a href="https://chk.eduzz.com/G92KE35KWE" target="_blank" rel="noopener" class="btn btn-primario">Garantir por R$ 497</a>
             </article>
         </div>
 
@@ -981,7 +958,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="centro" style="margin-top:0.9rem"><span class="btn-nota">para o Fim do Caos 2ª edição</span></p>
 
         <div class="ingressos-acao">
-            <a href="https://chk.eduzz.com/G92KE35KWE" target="_blank" rel="noopener" class="btn btn-primario">Garantir minha vaga no lote 0 <span class="seta">→</span></a>
+            <a href="https://chk.eduzz.com/G92KE35KWE" target="_blank" rel="noopener" class="btn btn-primario">Garantir minha vaga <span class="seta">→</span></a>
             <span class="btn-nota">Pagamento seguro · Capacidade limitada ao espaço físico</span>
         </div>
     </div>
@@ -1073,7 +1050,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p>Você pode fechar essa página e voltar pra mesma rotina amanhã. Abrir o WhatsApp, torcer por indicação, aceitar o caso errado e chamar isso de estratégia.</p>
         <p class="escolha">Ou pode decidir que o caos <span class="destaque">acaba em novembro.</span></p>
         <a href="#ingressos" class="btn btn-primario">Garantir minha vaga <span class="seta">→</span></a>
-        <span class="btn-nota">Lote 0 aberto · R$ 147 · 06 e 07 de novembro</span>
+        <span class="btn-nota">R$ 497 · 06 e 07 de novembro</span>
         <p class="assinatura">O caos não espera. Nem nós.</p>
     </div>
 </section>
@@ -1090,7 +1067,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ═══ CTA GRUDADO ═══ -->
 <div class="cta-fixo" id="cta-fixo">
     <div class="wrap">
-        <div class="cta-fixo-texto"><b>06 e 07 de novembro</b> · Lote 0 aberto · <b>R$ 147</b></div>
+        <div class="cta-fixo-texto"><b>06 e 07 de novembro</b> · Ingresso <b>R$ 497</b></div>
         <a href="#ingressos" class="btn btn-primario">Garantir minha vaga <span class="seta">→</span></a>
     </div>
 </div>
