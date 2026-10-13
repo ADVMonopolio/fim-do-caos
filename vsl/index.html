@@ -444,6 +444,35 @@
 
         /* ═══ 5 · DEPOIMENTOS EM VÍDEO ═══ */
         .prova { background: var(--fundo); overflow: hidden; }
+        /* pista de prints (mesma da principal) */
+        .prova-pista {
+            display: flex; gap: 1rem; margin-top: 3rem;
+            overflow-x: auto; scroll-snap-type: x mandatory;
+            padding-bottom: 1.2rem;
+            scrollbar-width: thin; scrollbar-color: var(--roxo-expansao) transparent;
+        }
+        .prova-pista::-webkit-scrollbar { height: 6px; }
+        .prova-pista::-webkit-scrollbar-thumb { background: var(--roxo-expansao); border-radius: 10px; }
+        .prova-print {
+            flex: 0 0 auto; width: min(280px, 72vw); height: 420px;
+            scroll-snap-align: center;
+            border-radius: 10px; overflow: hidden;
+            border: 1px solid var(--card-borda);
+            cursor: zoom-in;
+            transition: transform 0.25s ease, border-color 0.25s ease;
+            background: var(--card);
+        }
+        .prova-print:hover { transform: translateY(-4px); border-color: rgba(217,232,15,0.5); }
+        .prova-print img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+        .lightbox {
+            position: fixed; inset: 0; z-index: 9998;
+            background: rgba(5, 1, 8, 0.93);
+            display: none; align-items: center; justify-content: center;
+            padding: 2rem; cursor: zoom-out;
+        }
+        .lightbox.aberto { display: flex; }
+        .lightbox img { max-width: min(560px, 92vw); max-height: 88vh; width: auto; border-radius: 10px; }
+
         .prova-videos {
             display: grid; gap: 1.1rem; margin-top: 3rem;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -832,6 +861,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </section>
 
+<!-- ═══ 3b · PROVA SOCIAL (prints de mentorados, sem legenda: o print é a prova) ═══ -->
+<section class="bloco prova">
+    <div class="wrap">
+        <div class="centro">
+            <span class="eyebrow">Quem já aplicou</span>
+            <h2 class="display">O que acontece depois que o advogado <span class="amarelo">escolhe um território</span></h2>
+            <p class="lead">Conversas reais de mentorados. Arraste para o lado, clique para ampliar.</p>
+        </div>
+
+        <div class="prova-pista" id="pista">
+            <div class="prova-print"><img src="/assets/depoimento-ariane-contrato.jpeg" alt="Depoimento de mentorado" loading="lazy"></div>
+            <div class="prova-print"><img src="/assets/depoimento-thayssa-busca-instagram.jpg" alt="Depoimento de mentorado" loading="lazy"></div>
+            <div class="prova-print"><img src="/assets/depoimento-tatiana-gestao-financeira.jpg" alt="Depoimento de mentorado" loading="lazy"></div>
+            <div class="prova-print"><img src="/assets/depoimento-alvaro-mentoria.jpeg" alt="Depoimento de mentorado" loading="lazy"></div>
+            <div class="prova-print"><img src="/assets/depoimento-brenda-contrato.jpeg" alt="Depoimento de mentorado" loading="lazy"></div>
+            <div class="prova-print"><img src="/assets/depoimento-thayassa-reuniao.jpeg" alt="Depoimento de mentorado" loading="lazy"></div>
+            <div class="prova-print"><img src="/assets/depoimento-monica-contratos.jpeg" alt="Depoimento de mentorado" loading="lazy"></div>
+            <div class="prova-print"><img src="/assets/depoimento-nathalia-recchiutti.jpeg" alt="Depoimento de mentorado" loading="lazy"></div>
+            <div class="prova-print"><img src="/assets/depoimento-tatiana-alvaro.jpeg" alt="Depoimento de mentorado" loading="lazy"></div>
+            <div class="prova-print"><img src="/assets/depoimento-primeira-reuniao.jpeg" alt="Depoimento de mentorado" loading="lazy"></div>
+            <div class="prova-print"><img src="/assets/depoimento-indicacao-cliente.jpeg" alt="Depoimento de mentorado" loading="lazy"></div>
+            <div class="prova-print"><img src="/assets/depoimento-ariane-audio-mudo.jpeg" alt="Depoimento de mentorado" loading="lazy"></div>
+        </div>
+    </div>
+</section>
+
 <!-- ═══ 4 · FAIXA DOS MENTORADOS ═══ -->
 <section class="mentorados">
     <div class="wrap">
@@ -1063,6 +1118,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </footer>
 
+<div class="lightbox" id="lightbox"><img src="" alt="Depoimento ampliado" id="lightbox-img"></div>
+
 <!-- ═══ CTA GRUDADO ═══ -->
 <div class="cta-fixo" id="cta-fixo">
     <div class="wrap">
@@ -1136,6 +1193,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
     tique();
     setInterval(tique, 1000);
+
+    /* Lightbox dos prints */
+    var lightbox = document.getElementById('lightbox');
+    var lightboxImg = document.getElementById('lightbox-img');
+    document.querySelectorAll('.prova-print img').forEach(function (img) {
+        img.addEventListener('click', function () {
+            lightboxImg.src = img.src;
+            lightbox.classList.add('aberto');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    function fecharLightbox() {
+        lightbox.classList.remove('aberto');
+        lightboxImg.src = '';
+        document.body.style.overflow = '';
+    }
+    lightbox.addEventListener('click', fecharLightbox);
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && lightbox.classList.contains('aberto')) { fecharLightbox(); }
+    });
 })();
 </script>
 
